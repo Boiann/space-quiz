@@ -8,6 +8,7 @@ SCOPE = [
     "https://www.googleapis.com/auth/drive"
     ]
 
+# Google Sheets credentials and worksheet data
 CREDS = Credentials.from_service_account_file('creds.json')
 SCOPED_CREDS = CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
@@ -146,6 +147,11 @@ def score(replies_correct):
     points = replies_correct * 5
     print(f'You scored {points} points!')
 
+    data = player, points
+    quiz_data = [num for num in data]
+    update_worksheet(quiz_data, 'leaderboard')
+    leaderboards()
+
 
 def guide():
     '''
@@ -190,6 +196,20 @@ def restart_quiz():
         else:
             print('ERROR, You are allowed to enter only "Y" or "N"')
             continue
+
+
+def update_worksheet(data, worksheet):
+
+    worksheet_to_update = SHEET.worksheet(worksheet)
+    worksheet_to_update.append_row(data)
+
+
+def leaderboards():
+
+    lead = SHEET.worksheet('leaderboard')
+    leaderboard = lead.get_all_values()
+
+    print(leaderboard[0:10])
 
 
 def new_quiz():   
