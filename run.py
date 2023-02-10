@@ -1,6 +1,7 @@
 # Import necessary modules
 import gspread
 from google.oauth2.service_account import Credentials
+from tabulate import tabulate
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -226,7 +227,14 @@ def leaderboards():
     lead = SHEET.worksheet('leaderboard')
     leaderboard = lead.get_all_values()
 
-    print(leaderboard[0:10])
+    def size(dat):
+        return float(dat[1])
+
+    leaderboard.sort(key=size, reverse=True)
+
+    print(tabulate(
+        leaderboard[0:10], headers=['Player', 'Score'],
+        tablefmt='fancy_grid'))
 
 
 def new_quiz():   
