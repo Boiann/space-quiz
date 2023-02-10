@@ -62,14 +62,15 @@ hints_display = {
 
 print('ASCII ART, intro text')
 
-"""
-Prompt the user to enter their name and validate the input.
-The input must only contain letters and/or numbers and
-have a minimum length of 2 characters.The loop continues until a
-valid name is entered, breaking the loop and printing the 
-player's name to the terminal.
-"""
+
 while True:
+    """
+    Prompt the user to enter their name and validate the input.
+    The input must only contain letters and/or numbers and
+    have a minimum length of 2 characters.The loop continues until a
+    valid name is entered, breaking the loop and printing the 
+    player's name to the terminal.
+    """
     player = input('Please enter your name:').capitalize()
     if not player.isalnum():
         print('You must enter a name using only letters and numbers!')
@@ -147,6 +148,15 @@ def score(replies_correct):
     points = replies_correct * 5
     print(f'You scored {points} points!')
 
+    if points <= 20:
+        print('That is bad!')
+    elif points > 20 and points <= 50:
+        print('That is good!')
+    elif points > 50 and points <= 80:
+        print('That is excellent!')
+    elif points > 80:
+        print('That is masterful!')
+
     data = player, points
     quiz_data = [num for num in data]
     update_worksheet(quiz_data, 'leaderboard')
@@ -199,13 +209,20 @@ def restart_quiz():
 
 
 def update_worksheet(data, worksheet):
-
+    '''
+    This function appends a new row to a worksheet in a Google Sheets document.
+    '''
+    print(f'Update of {worksheet} worksheet in progress...')
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
+    print(f'{worksheet} worksheet updated!')
 
 
 def leaderboards():
-
+    '''
+    This function retrieves and displays the first 10 rows of the "leaderboard"
+    worksheet in a Google Sheets document.
+    '''
     lead = SHEET.worksheet('leaderboard')
     leaderboard = lead.get_all_values()
 
@@ -213,7 +230,7 @@ def leaderboards():
 
 
 def new_quiz():   
-
+    '''Starts a new instance of the quiz'''
     guide()
 
     print(f"Here's your first question, {player}:")
@@ -222,7 +239,7 @@ def new_quiz():
 
 
 def main_function():
-    
+    '''Main function that controls the flow of the quiz'''
     new_quiz()
 
     restart_quiz()
