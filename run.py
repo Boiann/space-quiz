@@ -193,17 +193,33 @@ def restart_quiz():
     The restart_quiz function asks the user if they would
     like to try the quiz again. The user is allowed to enter only
     Y or N. The loop continues until the user inputs a valid answer.
+    The option to change user name was added too.
     '''
     print('Would you like to try again?')
     while True:
         replay = input('Please enter "Y" for yes, "N" for no!')
         replay = replay.upper()
 
-        if replay == "Y":
-            new_quiz()
+        if replay == 'Y':
+            while True:
+                change = input('Would you like to change your username?')
+                change = change.upper()
+
+                if change == 'Y':
+                    print('Ok, restarting program!')
+                    exec(open("./run.py").read(), globals())
+                    break
+                elif change == 'N':
+                    print(f'Ok {player}, get ready for another round!')
+                    main_function()
+                    break
+                else:
+                    print('ERROR, You are allowed to enter only "Y" or "N"')
+                    continue
             break
         elif replay == 'N':
             quit()
+
         else:
             print('ERROR, You are allowed to enter only "Y" or "N"')
             continue
