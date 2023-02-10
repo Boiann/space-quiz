@@ -74,6 +74,7 @@ def start_quiz():
     If the user's input is not one of the accepted answers (A, B, or C),
     they are prompted again until a valid answer is entered.
     '''
+    replies = []
     question_number = 0
 
     for key in questions:
@@ -85,9 +86,12 @@ def start_quiz():
             choice = input('Please enter your choice; A, B, or C!').upper()
 
             if choice in ('A', 'B', 'C'):
+                replies.append(choice)
                 break
             else:
                 print('ERROR, You are allowed to enter only A, B or C')
+
+        question_number += 1        
 
 
 start_quiz()
