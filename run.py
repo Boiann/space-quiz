@@ -76,6 +76,10 @@ while True:
     elif len(player) < 2:
         print('You have to use a minimum of 2 letters and/or numbers.')
         continue
+    elif player == 'Hal':
+        player = player.upper()
+        print(f'Well hello master {player}!')
+        break
     else:
         print(f'Hello {player}!')
         break
