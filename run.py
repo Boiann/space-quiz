@@ -147,13 +147,36 @@ def guide():
             continue    
 
 
-def main_function():   
+def restart_quiz():
+    print('Would you like to try again?')
+    while True:
+        replay = input('Please enter "Y" for yes, "N" for no!')
+        replay = replay.upper()
+
+        if replay == "Y":
+            new_quiz()
+            break
+        elif replay == 'N':
+            quit()
+        else:
+            print('ERROR, You are allowed to enter only "Y" or "N"')
+            continue
+
+
+def new_quiz():   
 
     guide()
 
     print(f"Here's your first question, {player}:")
 
     start_quiz()
+
+
+def main_function():
+    
+    new_quiz()
+
+    restart_quiz()
 
 
 main_function()
