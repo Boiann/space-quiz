@@ -20,6 +20,23 @@ answ = SHEET.worksheet('answers')
 answer = answ.get_all_values()
 
 
+questions = {
+    question[0][0]: 'A',
+    question[1][0]: 'C',
+    question[2][0]: 'B',
+    question[3][0]: 'C',
+    question[4][0]: 'B'
+}
+
+answers = [
+    [answer[0][0], answer[0][1], answer[0][2]],
+    [answer[1][0], answer[1][1], answer[1][2]],
+    [answer[2][0], answer[2][1], answer[2][2]],
+    [answer[3][0], answer[3][1], answer[3][2]],
+    [answer[4][0], answer[4][1], answer[4][2]]
+]
+
+
 print('ASCII ART, intro text')
 
 """
