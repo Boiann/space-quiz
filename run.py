@@ -93,7 +93,9 @@ def start_quiz():
                 print('ERROR, You are allowed to enter only A, B or C')
 
         replies_correct += check_answer(questions.get(key), choice)
-        question_number += 1        
+        question_number += 1
+
+    score(replies_correct)
 
 
 def check_answer(reply, choice):
@@ -108,6 +110,11 @@ def check_answer(reply, choice):
     else:
         print(f'Sorry! The correct answer is {reply}.')
         return 0
+
+
+def score(replies_correct):
+    points = replies_correct * 5
+    print(f'You scored {points} points!')
 
 
 start_quiz()
