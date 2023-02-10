@@ -75,6 +75,7 @@ def start_quiz():
     they are prompted again until a valid answer is entered.
     '''
     replies = []
+    replies_correct = 0
     question_number = 0
 
     for key in questions:
@@ -91,7 +92,22 @@ def start_quiz():
             else:
                 print('ERROR, You are allowed to enter only A, B or C')
 
+        replies_correct += check_answer(questions.get(key), choice)
         question_number += 1        
+
+
+def check_answer(reply, choice):
+    """
+    This function checks whether the user's answer to a question is correct.
+    The correct answer is passed as the `reply` argument,
+    and the user's answer is passed as the `choice` argument.
+    """
+    if reply == choice:
+        print(f'Your choice was {choice}. Correct!')
+        return 1
+    else:
+        print(f'Sorry! The correct answer is {reply}.')
+        return 0
 
 
 start_quiz()
