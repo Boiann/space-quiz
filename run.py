@@ -19,7 +19,10 @@ question = quest.get_all_values()
 answ = SHEET.worksheet('answers')
 answer = answ.get_all_values()
 
-
+'''
+"questions" is a dictionary that maps the first element of each
+row in the question list to the corresponding letter of the answer.
+'''
 questions = {
     question[0][0]: 'A',
     question[1][0]: 'C',
@@ -28,6 +31,10 @@ questions = {
     question[4][0]: 'B'
 }
 
+'''
+"answers" is a list of lists, where each inner list contains the
+first three elements of a row in the answer list.
+'''
 answers = [
     [answer[0][0], answer[0][1], answer[0][2]],
     [answer[1][0], answer[1][1], answer[1][2]],
@@ -57,3 +64,30 @@ while True:
     else:
         print(f'Hello {player}!')
         break
+
+
+def start_quiz():
+    '''
+    This function presents a quiz to the user and collects their answers.
+    The quiz is defined by the global dictionaries `questions` and `answers`.
+    The user is prompted to enter their answer to each question (A, B, or C).
+    If the user's input is not one of the accepted answers (A, B, or C),
+    they are prompted again until a valid answer is entered.
+    '''
+    question_number = 0
+
+    for key in questions:
+        print(key)
+        for i in answer[question_number]:
+            print(i)
+
+        while True:
+            choice = input('Please enter your choice; A, B, or C!').upper()
+
+            if choice in ('A', 'B', 'C'):
+                break
+            else:
+                print('ERROR, You are allowed to enter only A, B or C')
+
+
+start_quiz()
