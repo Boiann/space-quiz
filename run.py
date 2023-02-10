@@ -24,6 +24,9 @@ answer = answ.get_all_values()
 hnt = SHEET.worksheet('hints')
 hints = hnt.get_all_values()
 
+know = SHEET.worksheet('knowledge')
+knowledge = know.get_all_values()
+
 '''
 "questions" is a dictionary that maps the first element of each
 row in the question list to the corresponding letter of the answer.
@@ -60,6 +63,13 @@ hints_display = {
     hints[4][0]
 }
 
+more_knowledge = {
+    knowledge[0][0],
+    knowledge[1][0],
+    knowledge[2][0],
+    knowledge[3][0],
+    knowledge[4][0]
+}
 
 print('ASCII ART, intro text')
 
@@ -120,6 +130,20 @@ def start_quiz():
                 print('ERROR, You are allowed to enter only A, B or C')
 
         replies_correct += check_answer(questions.get(key), choice)
+
+        learn_more = input('Do you want to know more? (Y/N)').upper()
+        if learn_more == 'N':
+            # Provide more information or resources here
+            print('Ok, on to the next question!')
+        elif learn_more == 'Y':
+            print('Ok, here goes!')
+            for more in more_knowledge:
+                if more == knowledge[question_number][0]:
+                    print(more)
+        else:
+            print('ERROR, You are allowed to enter only Y or N')
+            continue            
+
         question_number += 1
 
     score(replies_correct)
@@ -202,11 +226,11 @@ def restart_quiz():
 
         if replay == 'Y':
             while True:
-                change = input('Would you like to change your username?')
+                change = input('Would you like to reset/change your username?')
                 change = change.upper()
 
                 if change == 'Y':
-                    print('Ok, restarting program!')
+                    print('Ok, resetting quiz!')
                     exec(open("./run.py").read(), globals())
                     break
                 elif change == 'N':
