@@ -131,18 +131,20 @@ def start_quiz():
 
         replies_correct += check_answer(questions.get(key), choice)
 
-        learn_more = input('Do you want to know more? (Y/N)').upper()
-        if learn_more == 'N':
-            # Provide more information or resources here
-            print('Ok, on to the next question!')
-        elif learn_more == 'Y':
-            print('Ok, here goes!')
-            for more in more_knowledge:
-                if more == knowledge[question_number][0]:
-                    print(more)
-        else:
-            print('ERROR, You are allowed to enter only Y or N')
-            continue            
+        while True:
+            learn_more = input('Do you want to know more? (Y/N)').upper()
+            if learn_more == 'N':
+                print('Ok, on to the next question!')
+                break
+            elif learn_more == 'Y':
+                print('Ok, here goes!')
+                for more in more_knowledge:
+                    if more == knowledge[question_number][0]:
+                        print(more)
+                        break
+                break    
+            else:
+                print('ERROR, You are allowed to enter only Y or N')
 
         question_number += 1
 
