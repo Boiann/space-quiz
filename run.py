@@ -113,8 +113,47 @@ def check_answer(reply, choice):
 
 
 def score(replies_correct):
+    '''
+    This function calculates the user's score based on the number
+    of correct answers. The number of correct answers is passed
+    as the `replies_correct` argument. The function returns the
+    user's score, which is calculated as `replies_correct` multiplied by 5.
+    '''
     points = replies_correct * 5
     print(f'You scored {points} points!')
 
 
-start_quiz()
+def guide():
+    '''
+    The help() function is used to print the rules of the
+    quiz game to the user. The user is allowed to enter only
+    Y or N. The loop continues until the user inputs a valid answer.
+    '''
+    print('Do you want to see the guide/help section?')
+    while True:
+        user_input = input('Please enter Y for yes, N for no!')
+        user_input = user_input.upper()
+
+        if user_input == 'N':
+            print('Great, we will start the quiz then!')
+            break
+        elif user_input == 'Y':
+            print('The Rules')
+            print('Press ENTER key when ready!')
+            input()
+            break
+        else:
+            print('ERROR, You are allowed to enter only Y or N')
+            continue    
+
+
+def main_function():   
+
+    guide()
+
+    print(f"Here's your first question, {player}:")
+
+    start_quiz()
+
+
+main_function()
