@@ -19,6 +19,9 @@ question = quest.get_all_values()
 answ = SHEET.worksheet('answers')
 answer = answ.get_all_values()
 
+hnt = SHEET.worksheet('hints')
+hints = hnt.get_all_values()
+
 '''
 "questions" is a dictionary that maps the first element of each
 row in the question list to the corresponding letter of the answer.
@@ -42,6 +45,18 @@ answers = [
     [answer[3][0], answer[3][1], answer[3][2]],
     [answer[4][0], answer[4][1], answer[4][2]]
 ]
+
+'''
+"hints_display is a dictionary which contains the first elements
+of a list named hints.
+'''
+hints_display = {
+    hints[0][0],
+    hints[1][0],
+    hints[2][0],
+    hints[3][0],
+    hints[4][0]
+}
 
 
 print('ASCII ART, intro text')
@@ -89,6 +104,11 @@ def start_quiz():
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
                 break
+            elif choice == 'Y':
+                for hint in hints_display:
+                    if hint == hints[question_number][0]:
+                        print(hint)
+                        break
             else:
                 print('ERROR, You are allowed to enter only A, B or C')
 
@@ -148,6 +168,11 @@ def guide():
 
 
 def restart_quiz():
+    '''
+    The restart_quiz function asks the user if they would
+    like to try the quiz again. The user is allowed to enter only
+    Y or N. The loop continues until the user inputs a valid answer.
+    '''
     print('Would you like to try again?')
     while True:
         replay = input('Please enter "Y" for yes, "N" for no!')
