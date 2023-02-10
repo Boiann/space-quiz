@@ -52,7 +52,7 @@ answers = [
 ]
 
 '''
-"hints_display is a dictionary which contains the first elements
+"hints_display" is a dictionary which contains the first elements
 of a list named hints.
 '''
 hints_display = {
@@ -63,6 +63,10 @@ hints_display = {
     hints[4][0]
 }
 
+'''
+"more_knowledge" is a dictionary which contains the first elements
+of a list named hints.
+'''
 more_knowledge = {
     knowledge[0][0],
     knowledge[1][0],
@@ -114,10 +118,9 @@ def start_quiz():
         print(key)
         for i in answer[question_number]:
             print(i)
-
         while True:
-            choice = input('Please enter your choice; A, B, or C!').upper()
-
+            print('PSSSSSSSSST, you can enter Y for a hint!')
+            choice = input('Please enter your choice ( A, B or C )!').upper()
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
                 break
@@ -128,7 +131,7 @@ def start_quiz():
                         break
             else:
                 print('ERROR, You are allowed to enter only A, B or C')
-
+        
         replies_correct += check_answer(questions.get(key), choice)
 
         while True:
@@ -196,9 +199,8 @@ def guide():
     quiz game to the user. The user is allowed to enter only
     Y or N. The loop continues until the user inputs a valid answer.
     '''
-    print('Do you want to see the guide/help section?')
     while True:
-        user_input = input('Please enter Y for yes, N for no!')
+        user_input = input('Do you want to see the guide section? ( Y / N )')
         user_input = user_input.upper()
 
         if user_input == 'N':
@@ -221,14 +223,14 @@ def restart_quiz():
     Y or N. The loop continues until the user inputs a valid answer.
     The option to change user name was added too.
     '''
-    print('Would you like to try again?')
     while True:
-        replay = input('Please enter "Y" for yes, "N" for no!')
+        replay = input('Would you like to try again? ( Y / N )')
         replay = replay.upper()
 
         if replay == 'Y':
             while True:
-                change = input('Would you like to reset/change your username?')
+                print('Would you like to reset/change your username?')
+                change = input('( Y / N )')
                 change = change.upper()
 
                 if change == 'Y':
