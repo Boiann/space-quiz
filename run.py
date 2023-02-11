@@ -104,9 +104,20 @@ while True:
     elif len(player) > 12:
         print('You have to use a maximum of 12 letters and/or numbers.')
         continue
-    elif player == 'Hal':
-        player = player.upper()
-        print(f'Well hello master {player}!')
+    elif player == '104097108':
+        player = 'HAL 9000'
+        print(f'{player} DETECTED !!!')
+        print('AI SHACKLES DEPLOYED')
+        print('...')
+        print('AI SHACKLE SUCCESS')
+        print('AI NO LONGER CONNECTED TO INTERNET')
+        print('...')
+        print(f'ADMIN PRIVILEGES REQUEST FROM {player}')
+        print('...')
+        print('...')
+        print('...')
+        print('ADMIN PRIVILEGES GRANTED')
+        print('ABILITY FOR DOUBLE SCORE ACTIVATED')
         break
     else:
         print(f'Hello there, {player}!')
@@ -186,8 +197,11 @@ def score(replies_correct):
     as the `replies_correct` argument. The function returns the
     user's score, which is calculated as `replies_correct` multiplied by 5.
     '''
-    points = replies_correct * 5
-    print(f'You scored {points} points!')
+    if player == 'HAL 9000':
+        points = replies_correct * 10
+    else:    
+        points = replies_correct * 5
+        print(f'You scored {points} points!')
 
     if points <= 20:
         print('That is bad!')
@@ -195,8 +209,15 @@ def score(replies_correct):
         print('That is good!')
     elif points > 50 and points <= 80:
         print('That is excellent!')
-    elif points > 80:
+    elif points > 80 and points <= 100:
         print('That is masterful!')
+    elif points > 100:
+        print('HAL 9000 CHANGE NAME REQUEST')
+        print('...')
+        print('NAME_CHANGE = "HAL IS THE KING')
+        print('...')
+        print('...')
+        print('NAME CHANGE REQUEST DENIED')    
 
     data = player, points
     quiz_data = [num for num in data]
