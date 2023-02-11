@@ -6,7 +6,7 @@ from time import sleep
 import time
 import sys
 import os
-import ascii
+import art
 from termcolor import colored, cprint
 import emoji
 
@@ -146,19 +146,21 @@ more_knowledge = {
 '''
 Intro quote, text and ASCII art in specific order for better UX
 '''
-# ascii.SAGAN = colored(ascii.SAGAN, 'light_blue', attrs=['bold'])
-# typingPrint(ascii.SAGAN)
-# sleep(5)
-# clearScreen()
-# typingPrint('In loving memory of Carl Sagan, true hero of the cosmos.')
-# sleep(1)
-# clearScreen()
-# ascii.INTRO = colored(ascii.INTRO, 'blue', attrs=['bold'])
-# asciiTypingPrint(ascii.INTRO)
-# sleep(2)
-# typingPrint('Hope you have fun and learn something new!')
-# sleep(3)
-# clearScreen()
+art.SAGAN = colored(art.SAGAN, 'light_blue', attrs=['bold'])
+typingPrint(art.SAGAN)
+sleep(3)
+clearScreen()
+print()
+print()
+typingPrint('In loving memory of Carl Sagan, true hero of the cosmos.')
+sleep(1)
+clearScreen()
+art.INTRO = colored(art.INTRO, 'blue', attrs=['bold'])
+asciiTypingPrint(art.INTRO)
+sleep(2)
+typingPrint('            Hope you have fun and learn something new!')
+sleep(3)
+clearScreen()
 
 
 while True:
@@ -183,6 +185,7 @@ while True:
     elif player == '104097108':
         player = 'HAL_9000'
         cprint(f'{player} DETECTED !!!', 'red')
+        print()
         sleep(1)
         slowerTypingPrint('AI SHACKLES DEPLOYED')
         print()
@@ -214,10 +217,13 @@ while True:
         sleep(1)
         slowerTypingPrint('ABILITY FOR DOUBLE SCORE ACTIVATED')
         print()
+        print()
         sleep(1)
         break
     else:
+        print()
         typingPrint(f'Hello there, {player}!')
+        print()
         print()
         break
 
@@ -238,13 +244,13 @@ def start_quiz():
         clearScreen()
         typingPrint(key)
         print()
-        sleep(3)
+        print()
+        sleep(1)
         for i in answer[question_number]:
             print()
             typingPrint(i)
             print()
-            # sleep(1)
-            
+        print()    
         while True:
             print()
             choice = input('Please enter your choice,(A, B, C), H for a hint!')
@@ -255,6 +261,7 @@ def start_quiz():
             elif choice == 'H':
                 for hint in hints_display:
                     if hint == hints[question_number][0]:
+                        print()
                         cprint(hint, 'light_blue')
                         break        
             else:
@@ -270,8 +277,8 @@ def start_quiz():
                     clearScreen()
                     print()
                     typingPrint('The quiz is now over!')
+                    print()
                     sleep(2)
-                    clearScreen()
                     break
                 print()
                 typingPrint('Ok, on to the next question!')
@@ -351,13 +358,23 @@ def score(replies_correct):
     elif points > 80 and points <= 100:
         cprint('This is amazing, congratulation!!!', 'light_magenta')
     elif points > 100:
+        print()
         slowerTypingPrint('...')
+        print()
         slowerTypingPrint('HAL_9000 CHANGE NAME REQUEST')
+        print()
         slowerTypingPrint('...')
-        slowerTypingPrint('NAME_CHANGE = "HAL IS THE KING')
+        print()
+        slowerTypingPrint('NAME_CHANGE = "HAL IS THE KING"')
+        print()
         slowerTypingPrint('...')
+        print()
         slowerTypingPrint('...')
-        slowerTypingPrint('NAME CHANGE REQUEST DENIED')    
+        print()
+        sleep(1.5)
+        typingPrint('NAME CHANGE REQUEST DENIED')
+        sleep(1.5)
+        print()    
     
     print()
     typingPrint('Hope you had fun with this quiz!')
@@ -368,7 +385,7 @@ def score(replies_correct):
 
     data = player, points
     quiz_data = [num for num in data]
-    update_worksheet(quiz_data, 'leaderboard')
+    update_worksheet(quiz_data, 'Leaderboard')
     leaderboards()
 
 
@@ -391,8 +408,8 @@ def guide():
             typingPrint('Ok, here it goes:')
             sleep(1)
             clearScreen()
-            cprint(ascii.GUIDE, 'light_cyan')
-            typingPrint('Press ENTER key when ready!')
+            cprint(art.GUIDE, 'light_cyan')
+            typingPrint('Press ENTER key when ready to begin quiz!')
             input()
             break
         else:
@@ -416,11 +433,13 @@ def restart_quiz():
 
         if replay == 'Y':
             while True:
+                print()
                 typingPrint('Would you like to reset/change your username?')
                 change = input('( Y / N )')
                 change = change.upper()
 
                 if change == 'Y':
+                    print()
                     typingPrint('Ok, resetting quiz!')
                     typingPrint('...')
                     print()
@@ -428,10 +447,13 @@ def restart_quiz():
                     exec(open("./run.py").read(), globals())
                     break
                 elif change == 'N':
+                    print()
                     typingPrint(f'Ok {player}, get ready for another round!')
+                    print()
                     typingPrint('...')
                     print()
                     typingPrint('...')
+                    print()
                     main_function()
                     break
                 else:
@@ -441,8 +463,9 @@ def restart_quiz():
             break
         elif replay == 'N':
             clearScreen()
-            ascii.SAGAN_END = colored(ascii.SAGAN_END, 'light_blue')
-            typingPrint(ascii.SAGAN_END)
+            sleep(0.2)
+            art.SAGAN_E = colored(art.SAGAN_E, 'light_blue', attrs=['bold'])
+            typingPrint(art.SAGAN_E)
             print()
             typingPrint('Press ENTER to quit!')
             input()
@@ -495,7 +518,7 @@ def leaderboards():
     This function retrieves and displays the first 10 rows of the "leaderboard"
     worksheet in a Google Sheets document.
     '''
-    lead = SHEET.worksheet('leaderboard')
+    lead = SHEET.worksheet('Leaderboard')
     leaderboard = lead.get_all_values()
 
     def size(dat):
