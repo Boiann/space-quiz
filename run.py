@@ -76,16 +76,15 @@ more_knowledge = {
     knowledge[4][0]
 }
 
+print(ascii.SAGAN)
 
-print()
-print()
-print()
 print('Hello, welcome to the...')
 
 print(ascii.INTRO)
 
+print('Hope you have fun and learn something new!')
 print()
-
+print('To begin with the quiz,')
 
 while True:
     """
@@ -95,7 +94,7 @@ while True:
     valid name is entered, breaking the loop and printing the 
     player's name to the terminal.
     """
-    player = input('Please enter your name:').capitalize()
+    player = input('please enter your name:').capitalize()
     if not player.isalnum():
         print('You must enter a name using only letters and numbers!')
         continue
@@ -110,7 +109,7 @@ while True:
         print(f'Well hello master {player}!')
         break
     else:
-        print(f'Hello {player}!')
+        print(f'Hello there, {player}!')
         break
 
 

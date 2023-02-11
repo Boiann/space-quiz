@@ -24,3 +24,15 @@ INTRO = '''
                         \__|           By: Bojan Bakaric
 
 '''
+
+SAGAN = '''
+
+
+
+       "The cosmos is within us. We are made of star-stuff.
+           We are a way for the universe to know itself."
+                         -CARL SAGAN-
+
+
+
+'''
