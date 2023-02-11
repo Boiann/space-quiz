@@ -75,6 +75,6 @@ GUIDE = '''
 - There are options to restart the quiz keeping your username/nickname, or you
   can restart the whole quiz to enter a new one
 - There is a secret username you can use, but there are consequences,
-  so be prepared!
-- There is a clue hidden somewhere in the quiz, and here is another; ASCII.    
+  so be prepared! There is a clue hidden somewhere in the quiz,
+  and here is another; ASCII.    
 '''

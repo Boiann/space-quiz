@@ -8,6 +8,7 @@ import sys
 import os
 import ascii
 from termcolor import colored, cprint
+import emoji
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -141,14 +142,15 @@ more_knowledge = {
     knowledge[3][0],
     knowledge[4][0]
 }
+
 '''
 Intro quote, text and ASCII art in specific order for better UX
 '''
 # ascii.SAGAN = colored(ascii.SAGAN, 'light_blue', attrs=['bold'])
-# slowerTypingPrint(ascii.SAGAN)
+# typingPrint(ascii.SAGAN)
 # sleep(5)
 # clearScreen()
-# typingPrint('Hello, welcome to the...')
+# typingPrint('In loving memory of Carl Sagan, true hero of the cosmos.')
 # sleep(1)
 # clearScreen()
 # ascii.INTRO = colored(ascii.INTRO, 'blue', attrs=['bold'])
@@ -287,6 +289,7 @@ def start_quiz():
                             print()
                             typingPrint('Press ENTER to finish the quiz!')
                             input()
+                            clearScreen()
                             break
                         print()
                         typingPrint('Press ENTER when ready for next round!')
@@ -309,12 +312,16 @@ def check_answer(reply, choice):
     """
     if reply == choice:
         print()
-        cprint(f'Your choice was {choice}. Correct!', 'green')
+        print(('\U0001f44d        '), end=''),
+        cprint(f'Your choice was {choice}. Correct!', 'green', end=''),
+        print(emoji.emojize('        \U0001f44d'))
         print()
         return 1
     else:
         print()
-        cprint(f'Sorry! The correct answer is {reply}.', 'light_red')
+        print(('\U0001F44E        '), end=''),
+        cprint(f'Sorry! The correct answer is {reply}.', 'light_red', end='')
+        print(emoji.emojize('        \U0001F44E'))
         print()
         return 0
 
