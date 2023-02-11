@@ -169,7 +169,7 @@ while True:
         cprint('Please use a maximum of 12 letters and/or numbers.', 'red')
         continue
     elif player == '104097108':
-        player = 'HAL 9000'
+        player = 'HAL_9000'
         cprint(f'{player} DETECTED !!!', 'red')
         sleep(1)
         slowerTypingPrint('AI SHACKLES DEPLOYED')
@@ -285,10 +285,14 @@ def check_answer(reply, choice):
     and the user's answer is passed as the `choice` argument.
     """
     if reply == choice:
-        print(f'Your choice was {choice}. Correct!')
+        print()
+        cprint(f'Your choice was {choice}. Correct!', 'green')
+        print()
         return 1
     else:
-        print(f'Sorry! The correct answer is {reply}.')
+        print()
+        cprint(f'Sorry! The correct answer is {reply}.', 'light_red')
+        print()
         return 0
 
 
@@ -299,27 +303,28 @@ def score(replies_correct):
     as the `replies_correct` argument. The function returns the
     user's score, which is calculated as `replies_correct` multiplied by 5.
     '''
-    if player == 'HAL 9000':
+    if player == 'HAL_9000':
         points = replies_correct * 10
     else:    
         points = replies_correct * 5
-        print(f'You scored {points} points!')
+        cprint(f'You scored {points} points!', 'light_magenta')
 
     if points <= 20:
-        print('That is bad!')
+        cprint('You need more space knowledge!', 'light_red')
     elif points > 20 and points <= 50:
-        print('That is good!')
+        cprint('Ok result, needs improvement!', 'light_blue')
     elif points > 50 and points <= 80:
-        print('That is excellent!')
+        cprint('Very good, you know about space!', 'light_green')
     elif points > 80 and points <= 100:
-        print('That is masterful!')
+        cprint('This is amazing, congratulation!!!', 'light_magenta')
     elif points > 100:
-        print('HAL 9000 CHANGE NAME REQUEST')
-        print('...')
-        print('NAME_CHANGE = "HAL IS THE KING')
-        print('...')
-        print('...')
-        print('NAME CHANGE REQUEST DENIED')    
+        slowerTypingPrint('...')
+        slowerTypingPrint('HAL_9000 CHANGE NAME REQUEST')
+        slowerTypingPrint('...')
+        slowerTypingPrint('NAME_CHANGE = "HAL IS THE KING')
+        slowerTypingPrint('...')
+        slowerTypingPrint('...')
+        slowerTypingPrint('NAME CHANGE REQUEST DENIED')    
 
     data = player, points
     quiz_data = [num for num in data]
