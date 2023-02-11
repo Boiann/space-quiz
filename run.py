@@ -78,7 +78,7 @@ def typingInput(text):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
     value = input()  
     return value  
 
@@ -206,6 +206,7 @@ while True:
         break
     else:
         typingPrint(f'Hello there, {player}!')
+        print()
         break
 
 
@@ -222,39 +223,55 @@ def start_quiz():
     question_number = 0
 
     for key in questions:
-        print(key)
+        clearScreen()
+        typingPrint(key)
+        print()
+        sleep(3)
         for i in answer[question_number]:
-            print(i)
-        print('PSSSSSSSSST, you can enter Y for a hint!')    
+            print()
+            typingPrint(i)
+            print()
+            # sleep(1)
+            
         while True:
-            choice = input('Please enter your choice ( A, B or C )!').upper()
+            print()
+            choice = input('Please enter your choice,(A, B, C), H for a hint!')
+            choice = choice.upper()
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
                 break
-            elif choice == 'Y':
+            elif choice == 'H':
                 for hint in hints_display:
                     if hint == hints[question_number][0]:
-                        print(hint)
-                        break
+                        cprint(hint, 'light_blue')
+                        break        
             else:
-                print('ERROR, You are allowed to enter only A, B or C')
+                cprint('ERROR, Please enter only A, B, C, H', 'red')
         
         replies_correct += check_answer(questions.get(key), choice)
 
         while True:
-            learn_more = input('Do you want to know more? (Y/N)').upper()
+            learn_more = typingInput('Do you want to know more? ( Y / N )')
+            learn_more = learn_more.upper()
             if learn_more == 'N':
-                print('Ok, on to the next question!')
+                typingPrint('Ok, on to the next question!')
+                sleep(2)
                 break
             elif learn_more == 'Y':
-                print('Ok, here goes:')
+                print()
+                typingPrint('Ok, here goes:')
+                sleep(1)
+                print()
                 for more in more_knowledge:
                     if more == knowledge[question_number][0]:
-                        print(more)
+                        cprint(more, 'light_cyan')
+                        print()
+                        typingPrint('Press ENTER when ready for next round!')
+                        input()
                         break
                 break    
             else:
-                print('ERROR, You are allowed to enter only Y or N')
+                cprint('ERROR, You are allowed to enter only Y or N', 'red')
 
         question_number += 1
 
@@ -317,19 +334,25 @@ def guide():
     Y or N. The loop continues until the user inputs a valid answer.
     '''
     while True:
-        user_input = input('Do you want to see the guide section? ( Y / N )')
+        user_input = typingInput('Do you want to see the guide? (Y / N)')
         user_input = user_input.upper()
 
         if user_input == 'N':
-            print('Great, we will start the quiz then!')
+            print()
+            typingPrint('Great, the quiz is starting!')
+            sleep(2)
             break
         elif user_input == 'Y':
-            print(ascii.GUIDE)
-            print('Press ENTER key when ready!')
+            typingPrint('Ok, here it goes:')
+            sleep(1)
+            clearScreen()
+            cprint(ascii.GUIDE, 'light_cyan')
+            typingPrint('Press ENTER key when ready!')
             input()
             break
         else:
-            print('ERROR, You are allowed to enter only Y or N')
+            cprint('ERROR, You are allowed to enter only Y or N', 'red')
+            print()
             continue    
 
 
@@ -401,9 +424,7 @@ def leaderboards():
 def new_quiz():   
     '''Starts a new instance of the quiz'''
     guide()
-
-    print(f"Here's your first question, {player}:")
-
+    clearScreen()
     start_quiz()
 
 
