@@ -2,7 +2,12 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
+from time import sleep
+import time
+import sys
+import os
 import ascii
+from termcolor import colored, cprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -27,6 +32,34 @@ hints = hnt.get_all_values()
 
 know = SHEET.worksheet('knowledge')
 knowledge = know.get_all_values()
+
+
+def clearScreen():
+    os.system("clear")
+
+
+def typingPrint(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+
+
+def typingInput(text):
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.05)
+    value = input()  
+    return value  
+
+
+text = colored("Hello, World!", "red", attrs=["underline"])
+typingPrint(text)
+sleep(2)
+cprint("Hello, World!", "green", "on_red")
+sleep(2)
+clearScreen()
 
 '''
 "questions" is a dictionary that maps the first element of each
