@@ -71,6 +71,17 @@ def fasterTypingPrint(text):
         time.sleep(0.01)
 
 
+def asciiTypingPrint(text):
+    '''
+    Function for typewriter effect for printing the text, ultra speed
+    for printing the ascii art
+    '''
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.005)
+
+
 def typingInput(text):
     '''
     Function for typewriter effect for printing the inputs text
@@ -140,12 +151,11 @@ Intro quote, text and ASCII art in specific order for better UX
 # typingPrint('Hello, welcome to the...')
 # sleep(1)
 # clearScreen()
-ascii.INTRO = colored(ascii.INTRO, 'blue', attrs=['bold'])
-# fasterTypingPrint(ascii.INTRO)
-# sleep(1)
-# typingPrint('Hope you have fun and learn something new!')
+# ascii.INTRO = colored(ascii.INTRO, 'blue', attrs=['bold'])
+# asciiTypingPrint(ascii.INTRO)
 # sleep(2)
-# print()
+# typingPrint('Hope you have fun and learn something new!')
+# sleep(3)
 # clearScreen()
 
 
@@ -284,7 +294,7 @@ def start_quiz():
                         break
                 break    
             else:
-                cprint('ERROR, You are allowed to enter only Y or N', 'red')
+                cprint('ERROR, please enter only Y or N', 'red')
 
         question_number += 1
 
@@ -379,7 +389,7 @@ def guide():
             input()
             break
         else:
-            cprint('ERROR, You are allowed to enter only Y or N', 'red')
+            cprint('ERROR, please enter only Y or N', 'red')
             print()
             continue    
 
@@ -392,32 +402,47 @@ def restart_quiz():
     The option to change user name was added too.
     '''
     while True:
-        replay = input('Would you like to try again? ( Y / N )')
+        sleep(1)
+        print()
+        replay = typingInput('Would you like to try again? ( Y / N )')
         replay = replay.upper()
 
         if replay == 'Y':
             while True:
-                print('Would you like to reset/change your username?')
+                typingPrint('Would you like to reset/change your username?')
                 change = input('( Y / N )')
                 change = change.upper()
 
                 if change == 'Y':
-                    print('Ok, resetting quiz!')
+                    typingPrint('Ok, resetting quiz!')
+                    typingPrint('...')
+                    print()
+                    typingPrint('...')
                     exec(open("./run.py").read(), globals())
                     break
                 elif change == 'N':
-                    print(f'Ok {player}, get ready for another round!')
+                    typingPrint(f'Ok {player}, get ready for another round!')
+                    typingPrint('...')
+                    print()
+                    typingPrint('...')
                     main_function()
                     break
                 else:
-                    print('ERROR, You are allowed to enter only "Y" or "N"')
+                    print()
+                    cprint('ERROR, please enter only Y or N', 'red')
                     continue
             break
         elif replay == 'N':
+            clearScreen()
+            ascii.SAGAN_END = colored(ascii.SAGAN_END, 'light_blue')
+            typingPrint(ascii.SAGAN_END)
+            print()
+            typingPrint('Press ENTER to quit!')
+            input()
             quit()
 
         else:
-            print('ERROR, You are allowed to enter only "Y" or "N"')
+            cprint('ERROR, please enter only Y or N', 'red')
             continue
 
 
@@ -442,7 +467,8 @@ def update_worksheet(data, worksheet):
     typingPrint('...')
     print()
     sleep(1)
-    print('Preparing leaderboard...')
+    typingPrint('Preparing leaderboard...')
+    print()
     slowerTypingPrint('...')
     print()
     slowerTypingPrint('...')

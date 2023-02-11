@@ -29,13 +29,26 @@ SAGAN = '''
 
 
 
-       "The cosmos is within us. We are made of star-stuff.
+        "The cosmos is within us. We are made of star-stuff.
            We are a way for the universe to know itself."
                          -CARL SAGAN-
 
 
 
 '''
+
+SAGAN_END = '''
+
+
+
+        “We can judge our progress by the courage of our questions
+         and the depth of our answers, our willingness to embrace
+              what is true rather than what feels good.”
+                            -CARL SAGAN-
+
+
+'''
+
 
 '''
 - 80 characters wide guide
@@ -45,8 +58,8 @@ SAGAN = '''
 
 
 GUIDE = '''
-              --- SPACE QUIZ RULEBOOK ---
-                 The rules are simple:
+                     --- SPACE QUIZ RULEBOOK ---
+                        The rules are simple:
 - You only need to follow what the quiz is asking you, in most cases you will
   reply with Y and N            
 - You have to enter a username/nickname to play
