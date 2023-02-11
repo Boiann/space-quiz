@@ -254,8 +254,20 @@ def start_quiz():
             learn_more = typingInput('Do you want to know more? ( Y / N )')
             learn_more = learn_more.upper()
             if learn_more == 'N':
+                if question_number == 4:
+                    clearScreen()
+                    print()
+                    typingPrint('The quiz is over, hope you had fun!')
+                    print()
+                    typingPrint('And learned something new too!')
+                    print()
+                    typingPrint('And now for the score and leaderboard!')
+                    sleep(2)
+                    clearScreen()
+                    break
+                print()
                 typingPrint('Ok, on to the next question!')
-                sleep(2)
+                sleep(1)
                 break
             elif learn_more == 'Y':
                 print()
@@ -265,6 +277,11 @@ def start_quiz():
                 for more in more_knowledge:
                     if more == knowledge[question_number][0]:
                         cprint(more, 'light_cyan')
+                        if question_number == 4:
+                            print()
+                            typingPrint('Press ENTER to finish the quiz!')
+                            input()
+                            break
                         print()
                         typingPrint('Press ENTER when ready for next round!')
                         input()
@@ -345,7 +362,7 @@ def guide():
         if user_input == 'N':
             print()
             typingPrint('Great, the quiz is starting!')
-            sleep(2)
+            sleep(1)
             break
         elif user_input == 'Y':
             typingPrint('Ok, here it goes:')
