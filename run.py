@@ -257,11 +257,7 @@ def start_quiz():
                 if question_number == 4:
                     clearScreen()
                     print()
-                    typingPrint('The quiz is over, hope you had fun!')
-                    print()
-                    typingPrint('And learned something new too!')
-                    print()
-                    typingPrint('And now for the score and leaderboard!')
+                    typingPrint('The quiz is now over!')
                     sleep(2)
                     clearScreen()
                     break
@@ -324,7 +320,10 @@ def score(replies_correct):
         points = replies_correct * 10
     else:    
         points = replies_correct * 5
-        cprint(f'You scored {points} points!', 'light_magenta')
+    
+    print()
+    cprint(f'You scored {points} points!', 'light_magenta')
+    print()
 
     if points <= 20:
         cprint('You need more space knowledge!', 'light_red')
@@ -342,6 +341,13 @@ def score(replies_correct):
         slowerTypingPrint('...')
         slowerTypingPrint('...')
         slowerTypingPrint('NAME CHANGE REQUEST DENIED')    
+    
+    print()
+    typingPrint('Hope you had fun with this quiz!')
+    print()
+    print()
+    typingPrint('Press ENTER to update the leaderboard!')
+    input()
 
     data = player, points
     quiz_data = [num for num in data]
@@ -419,10 +425,36 @@ def update_worksheet(data, worksheet):
     '''
     This function appends a new row to a worksheet in a Google Sheets document.
     '''
-    print(f'Update of {worksheet} worksheet in progress...')
+    clearScreen()
+    print()
+    typingPrint(f'Update of {worksheet} worksheet in progress...')
+    print()
+    slowerTypingPrint('...')
+    print()
+    slowerTypingPrint('...')
+    print()
+    slowerTypingPrint('...')
+    print()
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
-    print(f'{worksheet} worksheet updated!')
+    typingPrint(f'{worksheet} worksheet updated!')
+    print()
+    typingPrint('...')
+    print()
+    sleep(1)
+    print('Preparing leaderboard...')
+    slowerTypingPrint('...')
+    print()
+    slowerTypingPrint('...')
+    print()
+    slowerTypingPrint('...')
+    print()
+    print('DONE!')
+    sleep(1)
+    print()
+    typingPrint('Press ENTER to see the leaderboard!')
+    input()
+    clearScreen()
 
 
 def leaderboards():
@@ -437,10 +469,12 @@ def leaderboards():
         return float(dat[1])
 
     leaderboard.sort(key=size, reverse=True)
+    
+    clearScreen()
 
-    print(tabulate(
+    cprint(tabulate(
         leaderboard[0:10], headers=['Player', 'Score'],
-        tablefmt='fancy_grid'))
+        tablefmt='fancy_grid'), 'light_yellow')
 
 
 def new_quiz():   
