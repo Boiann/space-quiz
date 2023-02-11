@@ -162,7 +162,7 @@ def start_quiz():
                 print('Ok, on to the next question!')
                 break
             elif learn_more == 'Y':
-                print('Ok, here goes!')
+                print('Ok, here goes:')
                 for more in more_knowledge:
                     if more == knowledge[question_number][0]:
                         print(more)
@@ -239,7 +239,7 @@ def guide():
             print('Great, we will start the quiz then!')
             break
         elif user_input == 'Y':
-            print('The Rules')
+            print(ascii.GUIDE)
             print('Press ENTER key when ready!')
             input()
             break
