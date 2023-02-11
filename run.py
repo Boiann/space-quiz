@@ -35,17 +35,46 @@ knowledge = know.get_all_values()
 
 
 def clearScreen():
+    '''
+    Function for cleaning the cli screen
+    '''
     os.system("clear")
 
 
 def typingPrint(text):
+    '''
+    Function for typewriter effect for printing the text
+    '''
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.05)
+        time.sleep(0.03)
+
+
+def slowerTypingPrint(text):
+    '''
+    Function for typewriter effect for printing the text, slower speed
+    '''
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.1)
+
+
+def fasterTypingPrint(text):
+    '''
+    Function for typewriter effect for printing the text, faster speed
+    '''
+    for character in text:
+        sys.stdout.write(character)
+        sys.stdout.flush()
+        time.sleep(0.01)
 
 
 def typingInput(text):
+    '''
+    Function for typewriter effect for printing the inputs text
+    '''
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
@@ -53,13 +82,6 @@ def typingInput(text):
     value = input()  
     return value  
 
-
-text = colored("Hello, World!", "red", attrs=["underline"])
-typingPrint(text)
-sleep(2)
-cprint("Hello, World!", "green", "on_red")
-sleep(2)
-clearScreen()
 
 '''
 "questions" is a dictionary that maps the first element of each
@@ -108,16 +130,24 @@ more_knowledge = {
     knowledge[3][0],
     knowledge[4][0]
 }
-
-print(ascii.SAGAN)
-
-print('Hello, welcome to the...')
-
-print(ascii.INTRO)
-
-print('Hope you have fun and learn something new!')
+'''
+Intro quote, text and ASCII art in specific order for better UX
+'''
+ascii.SAGAN = colored(ascii.SAGAN, 'light_blue', attrs=['bold'])
+slowerTypingPrint(ascii.SAGAN)
+sleep(5)
+clearScreen()
+typingPrint('Hello, welcome to the...')
+sleep(1)
+clearScreen()
+ascii.INTRO = colored(ascii.INTRO, 'blue', attrs=['bold'])
+fasterTypingPrint(ascii.INTRO)
+sleep(1)
+typingPrint('Hope you have fun and learn something new!')
+sleep(2)
 print()
-print('To begin with the quiz,')
+clearScreen()
+
 
 while True:
     """
@@ -127,15 +157,16 @@ while True:
     valid name is entered, breaking the loop and printing the 
     player's name to the terminal.
     """
-    player = input('please enter your name:').capitalize()
+    typingPrint('To begin with the quiz, ')
+    player = typingInput('Please enter your name:').capitalize()
     if not player.isalnum():
-        print('You must enter a name using only letters and numbers!')
+        cprint('Please enter a name using only letters/numbers!', 'red')
         continue
     elif len(player) < 2:
-        print('You have to use a minimum of 2 letters and/or numbers.')
+        cprint('Please use a minimum of 2 letters and/or numbers.', 'red')
         continue
     elif len(player) > 12:
-        print('You have to use a maximum of 12 letters and/or numbers.')
+        cprint('Please use a maximum of 12 letters and/or numbers.', 'red')
         continue
     elif player == '104097108':
         player = 'HAL 9000'
@@ -151,9 +182,8 @@ while True:
         print('...')
         print('ADMIN PRIVILEGES GRANTED')
         print('ABILITY FOR DOUBLE SCORE ACTIVATED')
-        break
     else:
-        print(f'Hello there, {player}!')
+        typingPrint(f'Hello there, {player}!')
         break
 
 
