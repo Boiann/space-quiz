@@ -153,7 +153,7 @@ clearScreen()
 print()
 print()
 typingPrint('In loving memory of Carl Sagan, true hero of the cosmos.')
-sleep(1)
+sleep(2)
 clearScreen()
 art.INTRO = colored(art.INTRO, 'blue', attrs=['bold'])
 asciiTypingPrint(art.INTRO)
@@ -257,6 +257,7 @@ def start_quiz():
             choice = choice.upper()
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
+                replies_correct += check_answer(questions.get(key), choice)
                 break
             elif choice == 'H':
                 for hint in hints_display:
@@ -267,8 +268,6 @@ def start_quiz():
             else:
                 cprint('ERROR, Please enter only A, B, C, H', 'red')
         
-        replies_correct += check_answer(questions.get(key), choice)
-
         while True:
             learn_more = typingInput('Do you want to know more? ( Y / N )')
             learn_more = learn_more.upper()
@@ -343,7 +342,7 @@ def score(replies_correct):
     if player == 'HAL_9000':
         points = replies_correct * 10
     else:    
-        points = replies_correct * 5
+        points = replies_correct * 50
     
     print()
     cprint(f'You scored {points} points!', 'light_magenta')
@@ -361,7 +360,11 @@ def score(replies_correct):
         print()
         slowerTypingPrint('...')
         print()
+        slowerTypingPrint('...')
+        print()
         slowerTypingPrint('HAL_9000 CHANGE NAME REQUEST')
+        print()
+        slowerTypingPrint('...')
         print()
         slowerTypingPrint('...')
         print()
