@@ -2,6 +2,7 @@
 import gspread
 from google.oauth2.service_account import Credentials
 from tabulate import tabulate
+import ascii
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -76,7 +77,14 @@ more_knowledge = {
 }
 
 
-print('ASCII ART, intro text')
+print()
+print()
+print()
+print('Hello, welcome to the...')
+
+print(ascii.INTRO)
+
+print()
 
 
 while True:
