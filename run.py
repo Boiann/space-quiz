@@ -75,6 +75,7 @@ more_knowledge = {
     knowledge[4][0]
 }
 
+
 print('ASCII ART, intro text')
 
 
@@ -92,6 +93,9 @@ while True:
         continue
     elif len(player) < 2:
         print('You have to use a minimum of 2 letters and/or numbers.')
+        continue
+    elif len(player) > 12:
+        print('You have to use a maximum of 12 letters and/or numbers.')
         continue
     elif player == 'Hal':
         player = player.upper()
@@ -118,8 +122,8 @@ def start_quiz():
         print(key)
         for i in answer[question_number]:
             print(i)
+        print('PSSSSSSSSST, you can enter Y for a hint!')    
         while True:
-            print('PSSSSSSSSST, you can enter Y for a hint!')
             choice = input('Please enter your choice ( A, B or C )!').upper()
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
