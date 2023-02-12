@@ -104,7 +104,22 @@ questions = {
     question[1][0]: 'C',
     question[2][0]: 'B',
     question[3][0]: 'C',
-    question[4][0]: 'B'
+    question[4][0]: 'B',
+    question[5][0]: 'A',
+    question[6][0]: 'B',
+    question[7][0]: 'A',
+    question[8][0]: 'B',
+    question[9][0]: 'A',
+    question[10][0]: 'C',
+    question[11][0]: 'A',
+    question[12][0]: 'B',
+    question[13][0]: 'C',
+    question[14][0]: 'A',
+    question[15][0]: 'B',
+    question[16][0]: 'A',
+    question[17][0]: 'C',
+    question[18][0]: 'A',
+    question[19][0]: 'C'
 }
 
 '''
@@ -116,7 +131,22 @@ answers = [
     [answer[1][0], answer[1][1], answer[1][2]],
     [answer[2][0], answer[2][1], answer[2][2]],
     [answer[3][0], answer[3][1], answer[3][2]],
-    [answer[4][0], answer[4][1], answer[4][2]]
+    [answer[4][0], answer[4][1], answer[4][2]],
+    [answer[5][0], answer[5][1], answer[5][2]],
+    [answer[6][0], answer[6][1], answer[6][2]],
+    [answer[7][0], answer[7][1], answer[7][2]],
+    [answer[8][0], answer[8][1], answer[8][2]],
+    [answer[9][0], answer[9][1], answer[9][2]],
+    [answer[10][0], answer[10][1], answer[10][2]],
+    [answer[11][0], answer[11][1], answer[11][2]],
+    [answer[12][0], answer[12][1], answer[12][2]],
+    [answer[13][0], answer[13][1], answer[13][2]],
+    [answer[14][0], answer[14][1], answer[14][2]],
+    [answer[15][0], answer[15][1], answer[15][2]],
+    [answer[16][0], answer[16][1], answer[16][2]],
+    [answer[17][0], answer[17][1], answer[17][2]],
+    [answer[18][0], answer[18][1], answer[18][2]],
+    [answer[19][0], answer[19][1], answer[19][2]]
 ]
 
 '''
@@ -128,7 +158,22 @@ hints_display = {
     hints[1][0],
     hints[2][0],
     hints[3][0],
-    hints[4][0]
+    hints[4][0],
+    hints[5][0],
+    hints[6][0],
+    hints[7][0],
+    hints[8][0],
+    hints[9][0],
+    hints[10][0],
+    hints[11][0],
+    hints[12][0],
+    hints[13][0],
+    hints[14][0],
+    hints[15][0],
+    hints[16][0],
+    hints[17][0],
+    hints[18][0],
+    hints[19][0],
 }
 
 '''
@@ -140,7 +185,22 @@ more_knowledge = {
     knowledge[1][0],
     knowledge[2][0],
     knowledge[3][0],
-    knowledge[4][0]
+    knowledge[4][0],
+    knowledge[5][0],
+    knowledge[6][0],
+    knowledge[7][0],
+    knowledge[8][0],
+    knowledge[9][0],
+    knowledge[10][0],
+    knowledge[11][0],
+    knowledge[12][0],
+    knowledge[13][0],
+    knowledge[14][0],
+    knowledge[15][0],
+    knowledge[16][0],
+    knowledge[17][0],
+    knowledge[18][0],
+    knowledge[19][0]
 }
 
 '''
@@ -182,8 +242,10 @@ while True:
     elif len(player) > 12:
         cprint('Please use a maximum of 12 letters and/or numbers.', 'red')
         continue
-    elif player == '104097108':
+    elif player == '072065076':
         player = 'HAL_9000'
+        clearScreen()
+        sleep(1)
         cprint(f'{player} DETECTED !!!', 'red')
         print()
         sleep(1)
@@ -272,7 +334,7 @@ def start_quiz():
             learn_more = typingInput('Do you want to know more? ( Y / N )')
             learn_more = learn_more.upper()
             if learn_more == 'N':
-                if question_number == 4:
+                if question_number == 19:
                     clearScreen()
                     print()
                     typingPrint('The quiz is now over!')
@@ -291,7 +353,7 @@ def start_quiz():
                 for more in more_knowledge:
                     if more == knowledge[question_number][0]:
                         cprint(more, 'light_cyan')
-                        if question_number == 4:
+                        if question_number == 19:
                             print()
                             typingPrint('Press ENTER to finish the quiz!')
                             input()
@@ -342,7 +404,7 @@ def score(replies_correct):
     if player == 'HAL_9000':
         points = replies_correct * 10
     else:    
-        points = replies_correct * 50
+        points = replies_correct * 5
     
     print()
     cprint(f'You scored {points} points!', 'light_magenta')
