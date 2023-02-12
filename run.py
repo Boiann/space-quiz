@@ -232,7 +232,7 @@ while True:
     player's name to the terminal.
     """
     typingPrint('To begin with the quiz, ')
-    player = typingInput('Please enter your name:').capitalize()
+    player = typingInput('Please enter your name:\n').capitalize()
     if not player.isalnum():
         cprint('Please enter a name using only letters/numbers!', 'red')
         continue
@@ -315,7 +315,7 @@ def start_quiz():
         print()    
         while True:
             print()
-            choice = input('Please enter your choice,(A, B, C), H for a hint!')
+            choice = input('Enter your choice,(A, B, C), H for a hint!\n')
             choice = choice.upper()
             if choice in ('A', 'B', 'C'):
                 replies.append(choice)
@@ -331,7 +331,7 @@ def start_quiz():
                 cprint('ERROR, Please enter only A, B, C, H', 'red')
         
         while True:
-            learn_more = typingInput('Do you want to know more? ( Y / N )')
+            learn_more = typingInput('Do you want to know more? ( Y / N )\n')
             learn_more = learn_more.upper()
             if learn_more == 'N':
                 if question_number == 19:
@@ -461,7 +461,7 @@ def guide():
     Y or N. The loop continues until the user inputs a valid answer.
     '''
     while True:
-        user_input = typingInput('Do you want to see the guide? (Y / N)')
+        user_input = typingInput('Do you want to see the guide? (Y / N)\n')
         user_input = user_input.upper()
 
         if user_input == 'N':
@@ -493,14 +493,14 @@ def restart_quiz():
     while True:
         sleep(1)
         print()
-        replay = typingInput('Would you like to try again? ( Y / N )')
+        replay = typingInput('Would you like to try again? ( Y / N )\n')
         replay = replay.upper()
 
         if replay == 'Y':
             while True:
                 print()
                 typingPrint('Would you like to reset/change your username?')
-                change = input('( Y / N )')
+                change = input('( Y / N )\n')
                 change = change.upper()
 
                 if change == 'Y':
