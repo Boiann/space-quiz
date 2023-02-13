@@ -206,19 +206,25 @@ more_knowledge = {
 '''
 Intro quote, text and ASCII art in specific order for better UX
 '''
+clearScreen()
+sleep(0.5)
 art.SAGAN = colored(art.SAGAN, 'light_blue', attrs=['bold'])
 typingPrint(art.SAGAN)
 sleep(3)
 clearScreen()
 print()
 print()
-typingPrint('In loving memory of Carl Sagan, true hero of the cosmos.')
+print()
+print()
+print()
+print()
+typingPrint('      In loving memory of Carl Sagan, true hero of the cosmos.')
 sleep(2)
 clearScreen()
 art.INTRO = colored(art.INTRO, 'blue', attrs=['bold'])
 asciiTypingPrint(art.INTRO)
 sleep(2)
-typingPrint('            Hope you have fun and learn something new!')
+typingPrint('               Hope you have fun and learn something new!')
 sleep(3)
 clearScreen()
 
@@ -232,6 +238,7 @@ while True:
     player's name to the terminal.
     """
     typingPrint('To begin with the quiz, ')
+    print()
     player = typingInput('Please enter your name:\n').capitalize()
     if not player.isalnum():
         cprint('Please enter a name using only letters/numbers!', 'red')
@@ -242,7 +249,7 @@ while True:
     elif len(player) > 12:
         cprint('Please use a maximum of 12 letters and/or numbers.', 'red')
         continue
-    elif player == '072065076':
+    elif player == '072065076' or player == '726576':
         player = 'HAL_9000'
         clearScreen()
         sleep(1)
@@ -257,6 +264,7 @@ while True:
         sleep(1)
         slowerTypingPrint('AI SHACKLE SUCCESS')
         print()
+        sleep(1)
         slowerTypingPrint('AI NO LONGER CONNECTED TO INTERNET')
         print()
         slowerTypingPrint('...')
@@ -304,6 +312,8 @@ def start_quiz():
 
     for key in questions:
         clearScreen()
+        print()
+        print()
         typingPrint(key)
         print()
         print()
@@ -379,14 +389,12 @@ def check_answer(reply, choice):
     and the user's answer is passed as the `choice` argument.
     """
     if reply == choice:
-        print()
         print(('\U0001f44d        '), end=''),
         cprint(f'Your choice was {choice}. Correct!', 'green', end=''),
         print(emoji.emojize('        \U0001f44d'))
         print()
         return 1
     else:
-        print()
         print(('\U0001F44E        '), end=''),
         cprint(f'Sorry! The correct answer is {reply}.', 'light_red', end='')
         print(emoji.emojize('        \U0001F44E'))
@@ -419,6 +427,10 @@ def score(replies_correct):
     elif points > 80 and points <= 100:
         cprint('This is amazing, congratulation!!!', 'light_magenta')
     elif points > 100:
+        cprint(f'You scored {points} points!', 'light_cyan')
+        print()
+        sleep(1)
+        typingPrint('INHUMAN SCORE DETECTED')
         print()
         slowerTypingPrint('...')
         print()
@@ -430,7 +442,7 @@ def score(replies_correct):
         print()
         slowerTypingPrint('...')
         print()
-        slowerTypingPrint('NAME_CHANGE = "HAL IS THE KING"')
+        slowerTypingPrint('NAME CHANGE = "HAL_IS_THE_KING"')
         print()
         slowerTypingPrint('...')
         print()
@@ -440,7 +452,7 @@ def score(replies_correct):
         typingPrint('NAME CHANGE REQUEST DENIED')
         sleep(1.5)
         print()    
-    
+
     print()
     typingPrint('Hope you had fun with this quiz!')
     print()
@@ -492,7 +504,6 @@ def restart_quiz():
     '''
     while True:
         sleep(1)
-        print()
         replay = typingInput('Would you like to try again? ( Y / N )\n')
         replay = replay.upper()
 
@@ -513,12 +524,14 @@ def restart_quiz():
                     break
                 elif change == 'N':
                     print()
-                    typingPrint(f'Ok {player}, get ready for another round!')
+                    typingPrint(f'Ok {player}, get ready for another go!')
                     print()
                     typingPrint('...')
                     print()
                     typingPrint('...')
                     print()
+                    clearScreen()
+                    sleep(0.2)
                     main_function()
                     break
                 else:
@@ -529,11 +542,9 @@ def restart_quiz():
         elif replay == 'N':
             clearScreen()
             sleep(0.2)
-            art.SAGAN_E = colored(art.SAGAN_E, 'light_blue', attrs=['bold'])
+            art.SAGAN_E = colored(art.SAGAN_E, 'blue', attrs=['bold'])
             typingPrint(art.SAGAN_E)
-            print()
-            typingPrint('Press ENTER to quit!')
-            input()
+            sleep(5)
             quit()
 
         else:
@@ -595,7 +606,7 @@ def leaderboards():
 
     cprint(tabulate(
         leaderboard[0:10], headers=['Player', 'Score'],
-        tablefmt='fancy_grid'), 'light_yellow')
+        tablefmt='fancy_grid'), 'light_cyan')
 
 
 def new_quiz():   
