@@ -44,7 +44,8 @@ def clearScreen():
 
 def typingPrint(text):
     '''
-    Function for typewriter effect for printing the text
+    Function for typewriter effect for printing the text,
+    this function is left as is because of line length restriction
     '''
     for character in text:
         sys.stdout.write(character)
@@ -52,35 +53,15 @@ def typingPrint(text):
         time.sleep(0.03)
 
 
-def slowerTypingPrint(text):
+def typePrint(text, speed=0.03):
     '''
-    Function for typewriter effect for printing the text, slower speed
-    '''
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.1)
-
-
-def fasterTypingPrint(text):
-    '''
-    Function for typewriter effect for printing the text, faster speed
+    Function for typewriter effect for printing the text
+    with variable speed
     '''
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(0.01)
-
-
-def asciiTypingPrint(text):
-    '''
-    Function for typewriter effect for printing the text, ultra speed
-    for printing the ascii art
-    '''
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.005)
+        time.sleep(speed)        
 
 
 def typingInput(text):
@@ -93,6 +74,15 @@ def typingInput(text):
         time.sleep(0.03)
     value = input()  
     return value  
+
+
+def doublePrint():
+    '''
+    Function for making double empty prints,
+    mostly used for UX purposes
+    '''
+    print()
+    print()
 
 
 '''
@@ -209,20 +199,17 @@ Intro quote, text and ASCII art in specific order for better UX
 clearScreen()
 sleep(0.5)
 art.SAGAN = colored(art.SAGAN, 'light_blue', attrs=['bold'])
-typingPrint(art.SAGAN)
+typePrint(art.SAGAN, speed=0.03)
 sleep(3)
 clearScreen()
-print()
-print()
-print()
-print()
-print()
-print()
+doublePrint()
+doublePrint()
+doublePrint()
 typingPrint('        In loving memory of Carl Sagan, true hero of the cosmos.')
 sleep(2)
 clearScreen()
 art.INTRO = colored(art.INTRO, 'blue', attrs=['bold'])
-asciiTypingPrint(art.INTRO)
+typePrint(art.INTRO, speed=0.005)
 sleep(2)
 typingPrint('               Hope you have fun and learn something new!')
 sleep(3)
@@ -237,17 +224,18 @@ while True:
     valid name is entered, breaking the loop and printing the 
     player's name to the terminal.
     """
-    typingPrint('To begin with the quiz, ')
-    print()
     player = typingInput('Please enter your name:\n').capitalize()
     if not player.isalnum():
         cprint('Please enter a name using only letters/numbers!', 'red')
+        print()
         continue
     elif len(player) < 2:
         cprint('Please use a minimum of 2 letters and/or numbers.', 'red')
+        print()
         continue
     elif len(player) > 12:
         cprint('Please use a maximum of 12 letters and/or numbers.', 'red')
+        print()
         continue
     elif player == '072065076' or player == '726576':
         player = 'HAL_9000'
@@ -256,45 +244,37 @@ while True:
         cprint(f'{player} DETECTED !!!', 'red')
         print()
         sleep(1)
-        slowerTypingPrint('AI SHACKLES DEPLOYED')
+        typePrint('AI SHACKLES DEPLOYED \n', speed=0.1)
+        sleep(1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        sleep(1)
+        typePrint('AI SHACKLE SUCCESS \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        sleep(1)
+        typePrint('AI NO LONGER CONNECTED TO INTERNET \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        sleep(1)
+        typePrint(f'ADMIN PRIVILEGES REQUEST FROM {player}', speed=0.1)
         print()
         sleep(1)
-        slowerTypingPrint('...')
-        print()
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
         sleep(1)
-        slowerTypingPrint('AI SHACKLE SUCCESS')
-        print()
+        typePrint('ADMIN PRIVILEGES GRANTED \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
         sleep(1)
-        slowerTypingPrint('AI NO LONGER CONNECTED TO INTERNET')
-        print()
-        slowerTypingPrint('...')
-        print()
-        sleep(1)
-        slowerTypingPrint(f'ADMIN PRIVILEGES REQUEST FROM {player}')
-        print()
-        sleep(1)
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('...')
-        print()
-        sleep(1)
-        slowerTypingPrint('ADMIN PRIVILEGES GRANTED')
-        print()
-        slowerTypingPrint('...')
-        print()
-        sleep(1)
-        slowerTypingPrint('ABILITY FOR DOUBLE SCORE ACTIVATED')
-        print()
-        print()
+        typePrint('ABILITY FOR DOUBLE SCORE ACTIVATED \n', speed=0.1)
+        doublePrint()
         sleep(1)
         break
     else:
         print()
         typingPrint(f'Hello there, {player}!')
-        print()
-        print()
+        doublePrint()
         break
 
 
@@ -312,11 +292,9 @@ def start_quiz():
 
     for key in questions:
         clearScreen()
-        print()
-        print()
+        doublePrint()
         typingPrint(key)
-        print()
-        print()
+        doublePrint()
         sleep(1)
         for i in answer[question_number]:
             print()
@@ -334,7 +312,6 @@ def start_quiz():
             elif choice == 'H':
                 for hint in hints_display:
                     if hint == hints[question_number][0]:
-                        print()
                         cprint(hint, 'light_blue')
                         break        
             else:
@@ -348,20 +325,15 @@ def start_quiz():
                     clearScreen()
                     print()
                     typingPrint('The quiz is now over!')
-                    print()
-                    print()
-                    typingPrint('Hope you had fun!')
                     sleep(2)
                     clearScreen()
                     sleep(0.2)
                     break
-                print()
                 typingPrint('Ok, on to the next question!')
                 sleep(1)
                 break
             elif learn_more == 'Y':
-                print()
-                typingPrint('Ok, here goes:')
+                typingPrint('Ok, here goes: \n')
                 sleep(1)
                 print()
                 for more in more_knowledge:
@@ -374,9 +346,6 @@ def start_quiz():
                             clearScreen()
                             print()
                             typingPrint('The quiz is now over!')
-                            print()
-                            print()
-                            typingPrint('Hope you had fun!')
                             sleep(2)
                             clearScreen()
                             sleep(0.2)
@@ -388,6 +357,7 @@ def start_quiz():
                 break    
             else:
                 cprint('ERROR, please enter only Y or N', 'red')
+                print()
 
         question_number += 1
 
@@ -425,10 +395,10 @@ def score(replies_correct):
         points = replies_correct * 10
     else:    
         points = replies_correct * 5
-    
+
     print()
     cprint(f'You scored {points} points!', 'light_magenta')
-    print()
+    doublePrint()
 
     if points <= 20:
         cprint('You need more space knowledge!', 'light_red')
@@ -441,33 +411,25 @@ def score(replies_correct):
     elif points > 100:
         print()
         sleep(1)
-        typingPrint('INHUMAN SCORE DETECTED')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('HAL_9000 CHANGE NAME REQUEST')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('NAME CHANGE = "HAL_IS_THE_KING"')
-        print()
-        slowerTypingPrint('...')
-        print()
-        slowerTypingPrint('...')
-        print()
-        sleep(1.5)
-        typingPrint('NAME CHANGE REQUEST DENIED')
-        sleep(1.5)
-        print()    
+        cprint('INHUMAN SCORE DETECTED', 'light_red')
+        sleep(1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        typePrint('HAL_9000 CHANGE NAME REQUEST \n', speed=0.1)
+        sleep(1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        typePrint('NAME CHANGE = "HAL_IS_THE_KING" \n', speed=0.1)
+        sleep(1)
+        typePrint('... \n', speed=0.1)
+        typePrint('... \n', speed=0.1)
+        sleep(2)
+        typePrint('NAME CHANGE REQUEST DENIED \n', speed=0.1)
+        sleep(1.5)  
 
-    print()
+    doublePrint()
     typingPrint('Hope you had fun with this quiz!')
-    print()
-    print()
+    doublePrint()
     typingPrint('Press ENTER to update the leaderboard!')
     input()
 
@@ -515,7 +477,7 @@ def restart_quiz():
     '''
     while True:
         sleep(1)
-        replay = typingInput('Would you like to try again? ( Y / N )\n')
+        replay = typingInput('Would you like to try again? ( Y / N )')
         replay = replay.upper()
 
         if replay == 'Y':
@@ -527,13 +489,10 @@ def restart_quiz():
 
                 if change == 'Y':
                     print()
-                    typingPrint('Ok, resetting quiz!')
-                    print()
-                    typingPrint('...')
-                    print()
-                    typingPrint('...')
-                    print()
-                    sleep(1)
+                    typingPrint('Ok, resetting quiz! \n')
+                    typingPrint('... \n')
+                    typingPrint('... \n')
+                    sleep(2)
                     clearScreen()
                     sleep(0.2)
                     exec(open("./run.py").read(), globals())
@@ -541,22 +500,24 @@ def restart_quiz():
                 elif change == 'N':
                     print()
                     typingPrint(f'Ok {player}, get ready for another go!')
-                    print()
-                    typingPrint('...')
-                    print()
-                    typingPrint('...')
-                    print()
+                    typingPrint('... \n')
+                    typingPrint('... \n')
                     sleep(2)
                     clearScreen()
                     sleep(0.2)
                     main_function()
                     break
                 else:
-                    print()
                     cprint('ERROR, please enter only Y or N', 'red')
                     continue
             break
         elif replay == 'N':
+            print()
+            typingPrint('Ok, exiting quiz! \n')
+            sleep(1)
+            typingPrint('... \n')
+            typingPrint('... \n')
+            sleep(1)
             clearScreen()
             sleep(0.2)
             art.SAGAN_E = colored(art.SAGAN_E, 'blue', attrs=['bold'])
@@ -575,33 +536,26 @@ def update_worksheet(data, worksheet):
     '''
     clearScreen()
     print()
-    typingPrint(f'Update of {worksheet} worksheet in progress...')
-    print()
-    slowerTypingPrint('...')
-    print()
-    slowerTypingPrint('...')
-    print()
-    slowerTypingPrint('...')
-    print()
+    typingPrint(f'Update of {worksheet} worksheet in progress')
+    typingPrint('... \n')
+    typingPrint('... \n')
+    typePrint('... \n', speed=0.1)
+    sleep(0.5)
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
     typingPrint(f'{worksheet} worksheet updated!')
     print()
-    typingPrint('...')
-    print()
+    typingPrint('... \n')
     sleep(1)
-    typingPrint('Preparing leaderboard...')
-    print()
-    slowerTypingPrint('...')
-    print()
-    slowerTypingPrint('...')
-    print()
-    slowerTypingPrint('...')
-    print()
-    print('DONE!')
+    typingPrint('Preparing leaderboard... \n')
+    typingPrint('... \n')
+    typingPrint('... \n')
+    typePrint('... \n', speed=0.1)
+    sleep(1)
+    cprint('DONE!', 'blue')
     sleep(1)
     print()
-    typingPrint('Press ENTER to see the leaderboard!')
+    typingPrint('Press ENTER to see the leaderboard! \n')
     input()
     clearScreen()
 
