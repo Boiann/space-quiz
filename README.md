@@ -1,31 +1,147 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+<!-- Code for readme adapted from author's own project (Portfolio 2),
+https://github.com/Boiann/budget-calculator -->
 
-Welcome Bojan Bakaric,
+# SPACE-QUIZ
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Short description
 
-## Reminders
+<!-- image -->
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+Visit the live site
 
-## Creating the Heroku app
+---
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+## CONTENTS
 
-1. `heroku/python`
-2. `heroku/nodejs`
+* [Project Overview](#project-overview)
+  * [Project Goals](#project-goals)
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+* [User Experience](#user-experience)
+  * [User Expectations](#user-expectations)
+  * [User Stories](#user-stories)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+* [Design](#design)
+  * [Colour Scheme](#colour-scheme)
+  * [Imagery](#imagery)
+  * [Structure](#structure)
+  * [Wireframes](#wireframes)
 
-Connect your GitHub repository and deploy as normal.
+* [Features](#features)
 
-## Constraints
+* [Future Implementations](#future-implementations)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+* [Technologies Used](#technologies-used)
+  * [Languages Used](#languages-used)
+  * [Programs Used](#programs-used)
 
------
-Happy coding!
+* [Deployment](#deployment)
+
+* [Testing](#testing)
+
+* [Credits](#credits)
+  * [Code used and adapted](#code-used-and-adapted)
+  * [Acknowledgments](#acknowledgments)
+
+---
+
+## **Project Overview**
+
+
+### **Project Goals**
+
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **User Experience**
+
+### **User Expectations**
+
+
+### **User Stories**
+
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Design**
+
+### **Colour Scheme**
+
+Colour Palette image
+
+Short description
+
+### **Imagery**
+
+images
+
+short description
+
+### **Structure**
+
+Flowchart
+ 
+### **Wireframes**
+
+Description and images
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Features**
+
+Features images/gifs
+
+## **Future Implementations**
+
+Description
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Technologies Used**
+
+### **Languages Used**
+
+* 
+
+### **Programs Used**
+
+* 
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Deployment**
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Testing**
+
+[Back to top ⇧](#space-quiz)
+
+---
+
+## **Credits**
+
+### **Code used and adapted**
+
+* 
+
+### **Websites visited to gather knowledge**
+
+  
+###  **Acknowledgments**
+
+
+[Back to top ⇧](#space-quiz)
+
+***
