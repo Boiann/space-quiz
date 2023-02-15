@@ -222,7 +222,8 @@ while True:
     The input must only contain letters and/or numbers and
     have a minimum length of 2 characters.The loop continues until a
     valid name is entered, breaking the loop and printing the 
-    player's name to the terminal.
+    player's name to the terminal. The user can input a 'secret' 
+    username, its effects are described in detail in README.MD.
     """
     player = typingInput('Please enter your name:\n').capitalize()
     if not player.isalnum():
@@ -285,6 +286,11 @@ def start_quiz():
     The user is prompted to enter their answer to each question (A, B, or C).
     If the user's input is not one of the accepted answers (A, B, or C),
     they are prompted again until a valid answer is entered.
+    The user can also choose to have a 'hint' displayed after every question
+    is asked, using 'H'. Also, per user's choice there is additional info 
+    about the question/answer available. All inputs are error checked, 
+    and depending on question number (final question) the user wii get unique
+    message at the end of the quiz.
     '''
     replies = []
     replies_correct = 0
@@ -390,6 +396,9 @@ def score(replies_correct):
     of correct answers. The number of correct answers is passed
     as the `replies_correct` argument. The function returns the
     user's score, which is calculated as `replies_correct` multiplied by 5.
+    If the user is using 'secret' username the score will be multiplied by
+    10. Depending on the score amount, the final message will be different in 
+    color and text.
     '''
     if player == 'HAL_9000':
         points = replies_correct * 10
