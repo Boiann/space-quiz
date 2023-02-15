@@ -225,6 +225,7 @@ while True:
     player's name to the terminal. The user can input a 'secret'
     username, its effects are described in detail in README.MD.
     """
+    print()
     player = typingInput('Please enter your name:\n').capitalize()
     if not player.isalnum():
         cprint('Please enter a name using only letters/numbers!', 'red')
@@ -242,6 +243,7 @@ while True:
         player = 'HAL_9000'
         clearScreen()
         sleep(1)
+        print()
         cprint(f'{player} DETECTED !!!', 'red')
         print()
         sleep(1)

@@ -37,7 +37,7 @@ SAGAN = '''
               "The cosmos is within us. We are made of star-stuff.
                  We are a way for the universe to know itself."
 
-                               -CARL SAGAN-
+                                -CARL SAGAN-
 
 
 
@@ -49,11 +49,11 @@ SAGAN_E = '''
 
 
 
-              "We can judge our progress by the courage of our questions
-               and the depth of our answers, our willingness to embrace
-                      what is true rather than what feels good."
+            "We can judge our progress by the courage of our questions
+             and the depth of our answers, our willingness to embrace
+                    what is true rather than what feels good."
 
-                                    -CARL SAGAN-
+                                 -CARL SAGAN-
 
 
 '''
