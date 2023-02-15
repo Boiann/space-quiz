@@ -271,8 +271,20 @@ If the user enters the secret username, special message prints with change of sc
 <!-- img -->
 </details>
 
+### **Front-end features**
+- Favicon and dynamic background/GIF
+<!-- img -->
+- GitHub and Youtube icon, 'Run Program' button hover colour change
+<!-- img -->
+- GitHub icon opening page in new tab
+<!-- img -->
+- Youtube icon opening page in new tab
+<!-- img -->
+
+---
 
 ## **Future Implementations**
+The author would like to implement random question order and add a lot more questions/answers/more knowledge. Also, give the user option to use various 'game modes' like easy, medium and hard and corresponding questions. Implement timer that the user can turn on/off for added challenge and more score points.
 
 [Back to top ⇧](#space-quiz)
 
@@ -282,11 +294,27 @@ If the user enters the secret username, special message prints with change of sc
 
 ### **Languages Used**
 
-* 
+- [HTML](https://en.wikipedia.org/wiki/HTML "Link to html wikipedia page") - The website content was adjusted using HTML language.
+- [CSS](https://en.wikipedia.org/wiki/CSS "Link to css wikipedia page") - The webpage was styled using custom CSS internally using 'style' in the head of layout.html.
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python wikipedia page") - The project logic and operations inside CLI were developed using Python language.
 
 ### **Programs Used**
 
-* 
+- [GitHub](https://github.com/ "Link to GitHub page") - Source code hosted on GitHub, deployed using Git Pages.
+- [GitPod](https://www.gitpod.io/ "Link to GitPod page") - Used to commit, comment and push code during the development process.
+- [Font Awesome](https://fontawesome.com/ "Link to Font Awesome page") - GitHub icon was obtained from Font Awesome.
+- [Balsamiq](https://balsamiq.com/ "Link to Balsamiq page") - Used to create wireframes and website structure map for the project.
+- [Visual Studio Code + Spell Checker add on](https://code.visualstudio.com/ "Link to Visual Studio page") - Used to spell-check the html and css code
+- [Google Keep](https://keep.google.com/ "Link to Google Keep page") - Used to make notes during the project duration
+- [LanguageTool](https://languagetool.org/ "Link to Language Tool page") - Used to spell-check the contents of README.md
+- [Google Fonts](https://fonts.google.com/ "Link to Google fonts page") - Used to import fonts to the project
+- [GifCap](https://gifcap.dev/ "Link to GifCap page") - used to capture gif-s of the project 
+- [Heroku](https://www.heroku.com/ "Link to Heroku page") - used to deploy the project
+- [XConvert](https://www.xconvert.com/compress-gif "Link to XConvert page") - used to compress GIF file
+- [Imgur](https://imgur.com/ "Link to Imgur page") - used to host the background image and favicon
+- [Patorjk](http://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20 "Link to Patorjk page") - used to convert text into ASCII art
+- [Google worksheet](https://www.google.com/sheets/about/ "Link to Google sheets page") - used to host the worksheet to hold data
+- [Lucidchart](https://www.lucidchart.com/pages/examples/flowchart-maker "Link to Lucidchart page") - used to make the flowchart for the project
 
 [Back to top ⇧](#space-quiz)
 
