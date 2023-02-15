@@ -69,6 +69,8 @@ The project also uses Google Worksheet API for:
  - More knowledge
  - Updating and displaying top 10 players on a leaderboard
 
+ Some of the features present in the project were concieved in the planning stages (error checking, feedback etc) and some were developed as the project grew in scope (more knowledge, secret username etc). The final result is an amalgam of what the author considers to be a good, interesting and educational quiz.
+
 ### **Project Goals**
  - Develop CLI based quiz game using Python
  - Present the quiz in a clean and easy to understand manner
@@ -183,11 +185,94 @@ Mobile wireframe was not considered as there was no instructions that making the
 
 ## **Features**
 
-Features images/gifs
+### **Intro**
+ - Intro clear screen, quote and ASCII art
+ <!-- image -->
+
+### **Name input**
+ - Name input ok, capitalize name
+ <!-- image -->
+ - Name input errors
+ <!-- img -->
+
+### **Guide**
+ - Guide/rulebook question ok input and display
+ <!-- img -->
+ - Guide/rulebook input error
+ <!-- img -->
+
+### **Quiz**
+ - Question/answers display, answer correct
+ <!-- img -->
+ - Question/answers display, answer wrong
+ <!-- img -->
+ - Question/answers display, hint input
+ <!-- img -->
+ - Question/answers display, input error
+ <!-- img -->
+
+### **More knowledge**
+ - Know more display, 'Y' input
+  <!-- img -->
+ - Know more display, 'N' input
+ <!-- img -->
+ - Know more display input error
+ <!-- img -->
+ - Know more last question message
+ <!-- img -->
+
+### **Quiz end messages** 
+ - Quiz over message and score
+ <!-- img -->
+ - Score colour and message change
+ <!-- img -->
+
+### **Leaderboard update message and display**
+ - Updating leaderboard
+ <!-- img -->
+ - Leaderboard display
+ <!-- img -->
+
+### **Quiz replay**
+ - Quiz replay 'N' input, outro quote
+ <!-- img -->
+ - Quiz replay error input
+ <!-- img -->
+ - Quiz replay 'Y' input, username question
+ <!-- img -->
+ - Quiz replay 'Y', username question 'Y' input
+ <!-- img -->
+ - Quiz replay 'Y', username question 'N' input
+ <!-- img -->
+ - Quiz replay 'Y', username question error input
+
+### **Secret username**
+The secret username is a throwback to a very popular Sci-Fi movie, '2001: A Space Odyssey. In the movie, the AI by the name HAL 9000 is the main antagonist.
+The secret username is first hinted in the guide/rulebook = '3 LETTERS = ASCII'.
+At first this means nothing, but as the user finishes the quiz the leaderboard is presented. The rules clearly say there are maximum of 100 points but somehow there is an user by the name 'HAL_9000' with a score of 105 points (present at the time of writing this README). That should give the user incentive to see the rules and replay the quiz again to see what is going on. Upon rechecking the clue '3 LETTERS = ASCII', the user should assume the need to change only the letters of 'HAL_9000' into ASCII code and input that as the username. As there are checks in place for name input against using special characters, meaning '_', the user should not consider '_9000' for input. As ASCII code can be triple or double digits, both 'secret' usernames are allowed:
+<details>
+<summary>=====SPOILER=====</summary>
+
+072065076 and 726576
+</details>
+If the user enters the secret username, special message prints with change of score calculation. Also, if the user scores more than 100 points, which is possible only using secret username, a special message will display at the end of the quiz.
+
+ - Secret username input result
+<details> 
+<summary>=====SPOILER=====</summary>
+
+<!-- img -->
+</details>
+
+ - Secret username score message
+<details>
+<summary>=====SPOILER=====</summary>
+
+<!-- img -->
+</details>
+
 
 ## **Future Implementations**
-
-Description
 
 [Back to top ⇧](#space-quiz)
 
