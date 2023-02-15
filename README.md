@@ -7,7 +7,7 @@ SPACE-Quiz is a Project 3 for Code Institute Full-stack development program: Pyt
 Made with passion for anyone interested in space, astronomy and anything related to it.
 The whole project is dedicated to Mr. Carl Sagan, whose books, TV shows and science communication continues to inspire today.
 
-<!-- image -->
+<!--Webpage image -->
 
 Visit the live site [Here.](https://space-quiz.herokuapp.com/ "Link to Budget Calculator")
 
@@ -101,15 +101,20 @@ I want no bugs or issues with the game
 
 ### **Colour Scheme**
 
-Colour Palette image
+<!-- Colour Palette image -->
 
-Short description
+There are just a few colors used in the CLI, by installing/importing TERMCOLOR and CPRINT. The red colored text signifies wrong answer/input, green is used for the right answer, light cyan for leaderboard, guide and more knowledge display. The blue is used for intro/outro quote and quiz logo/intro.
+Aside for CLI itself, on the webpage the colors used are blue for quiz title and its variations for hover color change on the 'run program' button.
+This was not mandatory but the author felt necessary to include simple but nice colours to pair with the project theme.
 
 ### **Imagery**
 
-images
+<!-- Stars GIF -->
+<!-- Favicon -->
 
-short description
+Only two images (image and GIF) were used for the project. The Interstellar Dream GIF was obtained from Youtube [Here](https://www.youtube.com/watch?v=Hh816wRR2hc&list=PLNZfrta02FkM15KMNlB24dDz68EPa22lD&index=27&ab_channel=AllBackgroundVideos "Link to Youtube"). The author used [GifCap](https://gifcap.dev/ "Link to GifCap page") to capture the GIF, then [XConvert](https://www.xconvert.com/compress-gif "Link to GifCap page") to resize and compress the GIF.
+The GIF's purpose is to make the UX better and add something dynamic outside the CLI. 
+The other image used is favicon 'galaxy' which pairs nicely with the project.
 
 ### **Structure**
 
