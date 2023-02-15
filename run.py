@@ -61,7 +61,7 @@ def typePrint(text, speed=0.03):
     for character in text:
         sys.stdout.write(character)
         sys.stdout.flush()
-        time.sleep(speed)        
+        time.sleep(speed)
 
 
 def typingInput(text):
@@ -72,8 +72,8 @@ def typingInput(text):
         sys.stdout.write(character)
         sys.stdout.flush()
         time.sleep(0.03)
-    value = input()  
-    return value  
+    value = input()
+    return value
 
 
 def doublePrint():
@@ -221,8 +221,8 @@ while True:
     Prompt the user to enter their name and validate the input.
     The input must only contain letters and/or numbers and
     have a minimum length of 2 characters.The loop continues until a
-    valid name is entered, breaking the loop and printing the 
-    player's name to the terminal. The user can input a 'secret' 
+    valid name is entered, breaking the loop and printing the
+    player's name to the terminal. The user can input a 'secret'
     username, its effects are described in detail in README.MD.
     """
     player = typingInput('Please enter your name:\n').capitalize()
@@ -287,8 +287,8 @@ def start_quiz():
     If the user's input is not one of the accepted answers (A, B, or C),
     they are prompted again until a valid answer is entered.
     The user can also choose to have a 'hint' displayed after every question
-    is asked, using 'H'. Also, per user's choice there is additional info 
-    about the question/answer available. All inputs are error checked, 
+    is asked, using 'H'. Also, per user's choice there is additional info
+    about the question/answer available. All inputs are error checked,
     and depending on question number (final question) the user wii get unique
     message at the end of the quiz.
     '''
@@ -306,7 +306,7 @@ def start_quiz():
             print()
             typingPrint(i)
             print()
-        print()    
+        print()
         while True:
             print()
             choice = input('Enter your choice,(A, B, C), H for a hint!\n')
@@ -319,10 +319,10 @@ def start_quiz():
                 for hint in hints_display:
                     if hint == hints[question_number][0]:
                         cprint(hint, 'light_blue')
-                        break        
+                        break
             else:
                 cprint('ERROR, Please enter only A, B, C, H', 'red')
-        
+
         while True:
             learn_more = typingInput('Do you want to know more? ( Y / N )\n')
             learn_more = learn_more.upper()
@@ -360,7 +360,7 @@ def start_quiz():
                         typingPrint('Press ENTER when ready for next round!')
                         input()
                         break
-                break    
+                break
             else:
                 cprint('ERROR, please enter only Y or N', 'red')
                 print()
@@ -397,12 +397,12 @@ def score(replies_correct):
     as the `replies_correct` argument. The function returns the
     user's score, which is calculated as `replies_correct` multiplied by 5.
     If the user is using 'secret' username the score will be multiplied by
-    10. Depending on the score amount, the final message will be different in 
+    10. Depending on the score amount, the final message will be different in
     color and text.
     '''
     if player == 'HAL_9000':
         points = replies_correct * 10
-    else:    
+    else:
         points = replies_correct * 5
 
     print()
@@ -434,7 +434,7 @@ def score(replies_correct):
         typePrint('... \n', speed=0.1)
         sleep(2)
         typePrint('NAME CHANGE REQUEST DENIED \n', speed=0.1)
-        sleep(1.5)  
+        sleep(1.5)
 
     doublePrint()
     typingPrint('Hope you had fun with this quiz!')
@@ -474,7 +474,7 @@ def guide():
         else:
             cprint('ERROR, please enter only Y or N', 'red')
             print()
-            continue    
+            continue
 
 
 def restart_quiz():
@@ -581,7 +581,7 @@ def leaderboards():
         return float(dat[1])
 
     leaderboard.sort(key=size, reverse=True)
-    
+
     clearScreen()
 
     cprint(tabulate(
@@ -589,7 +589,7 @@ def leaderboards():
         tablefmt='fancy_grid'), 'light_cyan')
 
 
-def new_quiz():   
+def new_quiz():
     '''Starts a new instance of the quiz'''
     guide()
     clearScreen()
