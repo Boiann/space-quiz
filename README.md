@@ -62,6 +62,13 @@ The quiz-based game explains itself but there are numerous features that (hopefu
  - Restart the quiz without using mouse and keep your username if you want
  - Enjoy simple and relaxing space-themed webpage
 
+The project also uses Google Worksheet API for:
+ - Questions
+ - Answers
+ - Hints
+ - More knowledge
+ - Updating and displaying top 10 players on a leaderboard
+
 ### **Project Goals**
  - Develop CLI based quiz game using Python
  - Present the quiz in a clean and easy to understand manner
@@ -118,11 +125,57 @@ The other image used is favicon 'galaxy' which pairs nicely with the project.
 
 ### **Structure**
 
-Flowchart
+<!-- flowchart img -->
+
+Flowchart was designed at the start of the project along with the wireframes.
+The final result differs from the flowchart slightly on account of implementing changes for better UX.
+
+Some of the thing different to the flowchart:
+ - Need help/guide? ==> leads straight into first round of the quiz instead asking if ready ==> loop back to asking need help/guide
+ - Added hints display after user is asked the question and presented with answers ('H' input)
+ - Added 'more knowledge' text after the answer is resolved. No matter the outcome (correct or wrong) the user can input 'Y' to learn more or 'N' to go to next round
+ - Question about 'Wanna go to Leaderboard' removed, the user is entered into the leaderboard automatically
+ - Add 'secret' username input, more about this feature in 'Features' section of this README
  
 ### **Wireframes**
 
-Description and images
+Wireframes for Assessment Guide and Project Planning & Ux were made before the ones for the content of the project itself.
+<details>
+<summary>Assessment guide wireframe</summary>
+
+<!-- img -->
+</details>
+
+<details>
+<summary>Project planning wireframe</summary>
+
+<!-- img -->
+</details>
+
+There are three wireframes for the project, each one corresponding to the level of learning outcome (grade); Pass Performance, Merit Performance and Distinction Performance.
+
+Differences between outcomes were considered early as to allow flexibility when working on the project. Personal, work, family, dependants and health situations were considered to have impact on time available for the project.
+Ideally, maximum time was to be taken to finish the project making the scope bigger.
+
+<details>
+<summary>Pass Performance wireframe</summary>
+
+<!-- img -->
+</details>
+
+<details>
+<summary>Merit Performance wireframe</summary>
+
+<!-- img -->
+</details>
+
+<details>
+<summary>Distinction Performance wireframe</summary>
+
+<!-- img -->
+</details>
+
+Mobile wireframe was not considered as there was no instructions that making the project responsive was neccessary. Upon checking other student's projects on Slack and their respective GitHub accounts, the author concluded this was not neccessary. Also checked with mentor, confirming this.
 
 [Back to top ⇧](#space-quiz)
 
