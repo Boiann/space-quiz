@@ -1,6 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Space Quiz">
+    <meta name="keywords" content="quiz, space, cosmos, sagan">
+    <meta name="author" content="Bojan Bakaric">
+
+    <title>Space Quiz</title>
+    <link rel="icon" href="../assets/images/icons8-galaxy-64.png">
+    <script src="https://kit.fontawesome.com/4fe3adf97b.js" crossorigin="anonymous"></script>
+
+    <style>
+        /* Google fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        body,
+        html {
+            font-family: Roboto, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: auto;
+            height: 100%;
+            background-color: black;
+            background-image: url(/assets/images/background_resized.gif);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header {
+            font-size: xx-large;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            background-color: #345eeb;
+            border: 1px solid grey;
+            color: white;
+            text-transform: uppercase;
+            margin: 10px;
+            border-radius: 8px;
+        }
+
+        button:hover {
+            background-color: #91a8f2;
+            color: #345eeb;
+            font-weight: 700;
+            border: 1px solid white;
+        }
+
+        header {
+            color: #345eeb;
+            margin: 10px;
+        }
+
+        footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin: 100px 570px;
+        }
+
+        a {
+            font-size: 250%;
+            color: #345eeb;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        a:hover {
+            color: #91a8f2;
+        }
+
+        .copyright {
+            color: #91a8f2;
+            font-size: 120%;
+            margin: 0 150px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .cppyright,
+        p {
+            margin: 0 5px;
+        }
+    </style>
+</head>
+
 <body>
+
+    <header>
+        <h1>
+            SPACE QUIZ
+        </h1>
+    </header>
+
+
     <button onclick="window.location.reload()">Run Program</button>
     <div id="terminal"></div>
+
+    <!-- Footer with clickable GitHub icon and copyright -->
+    <footer>
+        <div class="github">
+            <a href="https://github.com/Boiann" target="_blank" rel="noopener"
+                aria-label="Author's GitHub page (link opens in a new tab)">
+                <i class="fa-brands fa-github"></i></a>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-regular fa-copyright"></i> Bojan Bakaric 2023</p>
+        </div>
+        <div class="youtube">
+            <a href="https://www.youtube.com/watch?v=zSgiXGELjbc&ab_channel=melodysheep" target="_blank" rel="noopener"
+                aria-label="Carl Sagan song (link opens in a new tab)">
+                <i class="fa-brands fa-square-youtube"></i></a>
+        </div>
+    </footer>
 
     <script>
         var term = new Terminal({
@@ -11,8 +132,9 @@
         term.writeln('Running startup command: python3 run.py');
         term.writeln('');
 
-        var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ? (
-            ':' + location.port) : '') + '/');
+        var ws = new WebSocket(location.protocol.replace('http', 'ws') + '//' + location.hostname + (location.port ?
+            (
+                ':' + location.port) : '') + '/');
 
         ws.onopen = function () {
             new attach.attach(term, ws);
@@ -24,4 +146,6 @@
         // Set focus in the terminal
         document.getElementsByClassName("xterm-helper-textarea")[0].focus();
     </script>
+
 </body>
+<html>
