@@ -1,6 +1,3 @@
-<!-- Code for readme adapted from author's own project (Portfolio 2),
-https://github.com/Boiann/budget-calculator -->
-
 # SPACE-QUIZ
 
 SPACE-Quiz is a Project 3 for Code Institute Full-stack development program: Python Essentials.
@@ -29,6 +26,16 @@ Visit the live site [Here.](https://space-quiz.herokuapp.com/ "Link to Budget Ca
   * [Wireframes](#wireframes)
 
 * [Features](#features)
+  * [Intro](#intro)
+  * [Name input](#name-input)
+  * [Guide](#guide)
+  * [Quiz](#quiz)
+  * [More knowledge](#more-knowledge)
+  * [Quiz end messages](#quiz-end-messages)
+  * [Leaderboard update message and display](#leaderboard-update-message-and-display)
+  * [Quiz replay](#quiz-replay)
+  * [Secret username](#secret-username)
+  * [Front-end features](#front-end-features)
 
 * [Future Implementations](#future-implementations)
 
@@ -68,6 +75,7 @@ The project also uses Google Worksheet API for:
  - Hints
  - More knowledge
  - Updating and displaying top 10 players on a leaderboard
+ - This is the [Google worksheet](https://docs.google.com/spreadsheets/d/1-mEIbGDZpEof_4VUdDmKuQsoC3czJN-EKm6sUlSruns/edit#gid=0 "Link to Google sheets page") used to hold the data
 
  Some of the features present in the project were concieved in the planning stages (error checking, feedback etc) and some were developed as the project grew in scope (more knowledge, secret username etc). The final result is an amalgam of what the author considers to be a good, interesting and educational quiz.
 
@@ -321,6 +329,19 @@ The author would like to implement random question order and add a lot more ques
 ---
 
 ## **Deployment**
+The project was written and hosted on [GitHub](https://github.com/ "Link to GitHub page"). The author used GitHub's terminal output with command 'python3 run.py' to run the program logic/game. After the project was developed enough, it was deployed on [Heroku](https://www.heroku.com/ "Link to Heroku page") using the following method:
+
+1. Add dependencies in GitPod to requirements.txt file with command "pip3 freeze > requirements.txt"
+2. Commit and push to GitHub
+3. Go to the Heroku Dashboard
+4. Click "Create new app"
+5. Name app and select location
+6. Add Config Vars for Creds and Port in Settings tab
+7. Add the buildbacks to Python and NodeJS in that order
+8. Select appropriate deployment method, GitHub
+9. Connect to Github and link to repository
+10. Enable automatic deployment and/or deploy manually
+11. Click on Deploy
 
 [Back to top ⇧](#space-quiz)
 
@@ -338,7 +359,15 @@ Testing information can be found in a separate testing file [TESTING.md](/TESTIN
 
 ### **Code used and adapted**
 
-* 
+ - The author used his previous projects, [Boudoir Studio](https://boiann.github.io/boudoir-studio/index.html "Link to Boudoir Studio home page") ( GithHub repository [here](https://boiann.github.io/boudoir-studio/index.html "Link to Boudoir Studio home page") ), and [Budget Calculator](https://boiann.github.io/budget-calculator/ "Link to Budget Calculator") ( GithHub repository [here](https://github.com/Boiann/budget-calculator "Link to Budget Calculator GitHub repository") ) as a source for looking up the code for CSS and README purposes mainly.
+ - [Code Institute template](https://github.com/Code-Institute-Org/python-essentials-template "Link to CI Python template") was used to start the project.
+ - Using [Google worksheet](https://www.google.com/sheets/about/ "Link to Google sheets page") to manipulate questions and answers was seen during  Code Institute [Love Sandwiches](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/58d3e90f9a2043908c62f31e51c15deb/ "Link for Love Sandwiches project") project, ( GithHub repository [here](https://github.com/Code-Institute-Org/python-essentials-template "Link to CI Python template") ).
+ - [Pub Quiz Challenge](https://pub-quiz-challenge.herokuapp.com/ "Link to Pub Quiz Challenge") ( GithHub repository [here](https://github.com/CI-Tom/pub-quiz-challenge "Pub Quiz Challenge repository page") ) was studied in depth to get a sense of how a quiz game in Python would work, and to get a sense of the quiz layout itself. It has also provided the solution for pairing the questions with the right answers.
+ - [Football Quiz](https://football-quiz-game.herokuapp.com/ "Link to Football Quiz") ( GithHub repository [here](https://github.com/mikyrenato/3rd_Project_Quiz_Game "Football Quiz repository page") ) was taken note of because the CLI was centered and the image background was applied. This is also where the author learned about tabular display of the leaderboard.
+ - [Wheel of Fortune](https://the-wheel-of-fortune.herokuapp.com/ "Link to Wheel of Fortune") ( GithHub repository [here](https://github.com/LudovicLeGuen/Wheel-of-Fortune "Wheel of Fortune repository page") ) was studied and this is where the author noticed and learned about clearing the screen in CLI.
+ - [Harry Potter Adventure Game](https://harry-potter-adventure-game.herokuapp.com/ "Link to Harry Potter Adventure Game") ( GithHub repository [here](https://github.com/AlexaH88/harry-potter-adventure-game "Harry Potter Adventure Game repository page") ) was studied to fix the background issue in HTML, more on this in BUGS section in [TESTING.md](/TESTING.md).
+ - [Carl Sagan quotes webpage](https://www.goodreads.com/author/quotes/10538.Carl_Sagan "Link to Carl Sagan quotes webpage") was used to copy Mr. Sagan's quotes for intro/outro.
+ - [Space Trivia Questions](https://conversationstartersworld.com/trivia-questions/space-trivia-questions/ "Link to Space Trivia Questions") was where the author copied the questions, answers and 'more knowledge' info from.
 
 ### **Websites visited to gather knowledge**
 
