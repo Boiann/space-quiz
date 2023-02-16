@@ -103,12 +103,12 @@ The project also uses Google Worksheet API for:
 
 ### **User Stories**
 
-I want to know what is this site for
-I want to find additional info/instructions
-I want to have numbers in my username
-I want to know more about the answer I got wrong
-I want to restart the quiz and keep my username
-I want no bugs or issues with the game
+ - I want to know what is this site for
+ - I want to find additional info/instructions
+ - I want to have numbers in my username
+ - I want to know more about the answer I got wrong
+ - I want to restart the quiz and keep my username
+ - I want no bugs or issues with the game
 
 [Back to top ⇧](#space-quiz)
 
@@ -382,6 +382,9 @@ The standout webpages are:
  - [This](https://www.codingem.com/python-print-on-the-same-line/ "Link to print on the same line") website was used to learn about printing on a same line.
 
 ###  **Acknowledgments**
+This whole project is dedicated to Carl Sagan, astronomer, planetary scientist, cosmologist, astrophysicist, astrobiologist, author, and science communicator.
+His book 'Cosmos' inspired me as a child and geared me towards sciences and astronomy.
+
 Without support I got from other people, this project would never be realized. I'll try and remember to thank everyone and everything I can!
 
 - Mirjana, my wife, thank you for your support and cheering me on, lifting me 
