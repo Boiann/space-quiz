@@ -370,10 +370,31 @@ Testing information can be found in a separate testing file [TESTING.md](/TESTIN
  - [Space Trivia Questions](https://conversationstartersworld.com/trivia-questions/space-trivia-questions/ "Link to Space Trivia Questions") was where the author copied the questions, answers and 'more knowledge' info from.
 
 ### **Websites visited to gather knowledge**
+There were many sites visited during the duration of the project.
+[Google](https://google.com/ "Google home page") was used to produce results of the specific query, and [Stack Overflow](https://stackoverflow.com/ "Stack Overflow home page") proved to be the best source of information for various queries/issues. 
 
-  
+The standout webpages are:
+- [This](https://stackoverflow.com/questions/5967500/how-to-correctly-sort-a-string-with-a-number-inside "Link to Sorting a string") website was used to learn about sorting a string.
+ - [This](https://pypi.org/project/tabulate/ "Link to tabulate") website was used to learn about tabulating the leaderboard.
+ - [This](https://www.geeksforgeeks.org/clear-screen-python/ "Link to sleep") website was used to learn about sleep.
+ - [This](https://www.101computing.net/python-typing-text-effect/ "Link to typing print and clear screen") website was used to learn about typing print, input and clear screen.
+ - [This](https://stackoverflow.com/questions/46112605/python3-issue-with-calling-execopen-read-inside-a-function "Link to restart program") website was used to learn about restarting the program.
+ - [This](https://www.codingem.com/python-print-on-the-same-line/ "Link to print on the same line") website was used to learn about printing on a same line.
+
 ###  **Acknowledgments**
+Without support I got from other people, this project would never be realized. I'll try and remember to thank everyone and everything I can!
 
+- Mirjana, my wife, thank you for your support and cheering me on, lifting me 
+back up when it got hard. Thank you for taking care of all the housework and food, children and numerous other responsibilities while I was busy with full time job and doing this project on the side. Without you this journey into career change would never be possible.
+- A., G. and V., my three beautiful girls. Thank you for being so understanding during the project work. Thank you from the bottom of my heart for being who you are, wonderful and delightful souls. You make me proud to be your dad.
+- Boris, my brother, thank you for testing my project so thoroughly, and for your support.
+- Marija and Boris, my mother and father, thank you for making me feel like a superstar when I announced I'm starting this journey.
+- John, my friend, thank you for starting me on this path, and for your support, chats and sharing the things you learned.
+- Helen from Code Institute, thank you believing in me and making this change possible.
+- Slack community, thank you for being a constant source of good information.
+Special mentions are Sirinya_5P, Kate L_5P and Tomislav_5P, whose praise lifted my spirits and reinforced the notion that I can do this.
+- Koko, my mentor, thank you for being an incredible source of solutions and good advice, your support meant a great deal during the project.
+- C8H10N4O2 in a cup. Thank you for existing.
 
 [Back to top ⇧](#space-quiz)
 
