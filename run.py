@@ -42,21 +42,10 @@ def clearScreen():
     os.system("clear")
 
 
-def typingPrint(text):
-    '''
-    Function for typewriter effect for printing the text,
-    this function is left as is because of line length restriction
-    '''
-    for character in text:
-        sys.stdout.write(character)
-        sys.stdout.flush()
-        time.sleep(0.03)
-
-
 def typePrint(text, speed=0.03):
     '''
     Function for typewriter effect for printing the text
-    with variable speed
+    with variable speed, 0.03 speed by default
     '''
     for character in text:
         sys.stdout.write(character)
@@ -205,13 +194,13 @@ clearScreen()
 doublePrint()
 doublePrint()
 doublePrint()
-typingPrint('        In loving memory of Carl Sagan, true hero of the cosmos.')
+typePrint('        In loving memory of Carl Sagan, true hero of the cosmos.')
 sleep(2)
 clearScreen()
 art.INTRO = colored(art.INTRO, 'blue', attrs=['bold'])
 typePrint(art.INTRO, speed=0.005)
 sleep(2)
-typingPrint('               Hope you have fun and learn something new!')
+typePrint('               Hope you have fun and learn something new!')
 sleep(3)
 clearScreen()
 
@@ -276,7 +265,7 @@ while True:
         break
     else:
         print()
-        typingPrint(f'Hello there, {player}!')
+        typePrint(f'Hello there, {player}!')
         doublePrint()
         break
 
@@ -301,12 +290,12 @@ def start_quiz():
     for key in questions:
         clearScreen()
         doublePrint()
-        typingPrint(key)
+        typePrint(key)
         doublePrint()
         sleep(1)
         for i in answer[question_number]:
             print()
-            typingPrint(i)
+            typePrint(i)
             print()
         print()
         while True:
@@ -332,16 +321,16 @@ def start_quiz():
                 if question_number == 19:
                     clearScreen()
                     print()
-                    typingPrint('The quiz is now over!')
+                    typePrint('The quiz is now over!')
                     sleep(2)
                     clearScreen()
                     sleep(0.2)
                     break
-                typingPrint('Ok, on to the next question!')
+                typePrint('Ok, on to the next question!')
                 sleep(1)
                 break
             elif learn_more == 'Y':
-                typingPrint('Ok, here goes: \n')
+                typePrint('Ok, here goes: \n')
                 sleep(1)
                 print()
                 for more in more_knowledge:
@@ -349,17 +338,17 @@ def start_quiz():
                         cprint(more, 'light_cyan')
                         if question_number == 19:
                             print()
-                            typingPrint('Press ENTER to finish the quiz!')
+                            typePrint('Press ENTER to finish the quiz!')
                             input()
                             clearScreen()
                             print()
-                            typingPrint('The quiz is now over!')
+                            typePrint('The quiz is now over!')
                             sleep(2)
                             clearScreen()
                             sleep(0.2)
                             break
                         print()
-                        typingPrint('Press ENTER when ready for next round!')
+                        typePrint('Press ENTER when ready for next round!')
                         input()
                         break
                 break
@@ -408,7 +397,7 @@ def score(replies_correct):
         points = replies_correct * 5
 
     print()
-    cprint(f'You scored {points} points!', 'light_magenta')
+    cprint(f'You scored {points} points!', 'light_cyan')
     doublePrint()
 
     if points <= 20:
@@ -418,7 +407,7 @@ def score(replies_correct):
     elif points > 50 and points <= 80:
         cprint('Very good, you know about space!', 'light_green')
     elif points > 80 and points <= 100:
-        cprint('This is amazing, congratulation!!!', 'light_magenta')
+        cprint('This is amazing, congratulations!!!', 'light_magenta')
     elif points > 100:
         print()
         sleep(1)
@@ -439,9 +428,9 @@ def score(replies_correct):
         sleep(1.5)
 
     doublePrint()
-    typingPrint('Hope you had fun with this quiz!')
+    typePrint('Hope you had fun with this quiz!')
     doublePrint()
-    typingPrint('Press ENTER to update the leaderboard!')
+    typePrint('Press ENTER to update the leaderboard!')
     input()
 
     data = player, points
@@ -462,15 +451,15 @@ def guide():
 
         if user_input == 'N':
             print()
-            typingPrint('Great, the quiz is starting!')
+            typePrint('Great, the quiz is starting!')
             sleep(1)
             break
         elif user_input == 'Y':
-            typingPrint('Ok, here it goes:')
+            typePrint('Ok, here it goes:')
             sleep(1)
             clearScreen()
             cprint(art.GUIDE, 'light_cyan')
-            typingPrint('Press ENTER key when ready to begin quiz!')
+            typePrint('Press ENTER key when ready to begin quiz!')
             input()
             break
         else:
@@ -494,15 +483,15 @@ def restart_quiz():
         if replay == 'Y':
             while True:
                 print()
-                typingPrint('Would you like to reset/change your username?')
+                typePrint('Would you like to reset/change your username?')
                 change = input('( Y / N )\n')
                 change = change.upper()
 
                 if change == 'Y':
                     print()
-                    typingPrint('Ok, resetting quiz! \n')
-                    typingPrint('... \n')
-                    typingPrint('... \n')
+                    typePrint('Ok, resetting quiz! \n')
+                    typePrint('... \n')
+                    typePrint('... \n')
                     sleep(2)
                     clearScreen()
                     sleep(0.2)
@@ -510,9 +499,9 @@ def restart_quiz():
                     break
                 elif change == 'N':
                     print()
-                    typingPrint(f'Ok {player}, get ready for another go!')
-                    typingPrint('... \n')
-                    typingPrint('... \n')
+                    typePrint(f'Ok {player}, get ready for another go!')
+                    typePrint('... \n')
+                    typePrint('... \n')
                     sleep(2)
                     clearScreen()
                     sleep(0.2)
@@ -524,15 +513,15 @@ def restart_quiz():
             break
         elif replay == 'N':
             print()
-            typingPrint('Ok, exiting quiz! \n')
+            typePrint('Ok, exiting quiz! \n')
             sleep(1)
-            typingPrint('... \n')
-            typingPrint('... \n')
+            typePrint('... \n')
+            typePrint('... \n')
             sleep(1)
             clearScreen()
             sleep(0.2)
             art.SAGAN_E = colored(art.SAGAN_E, 'blue', attrs=['bold'])
-            typingPrint(art.SAGAN_E)
+            typePrint(art.SAGAN_E)
             sleep(5)
             quit()
 
@@ -547,26 +536,26 @@ def update_worksheet(data, worksheet):
     '''
     clearScreen()
     print()
-    typingPrint(f'Update of {worksheet} worksheet in progress')
-    typingPrint('... \n')
-    typingPrint('... \n')
+    typePrint(f'Update of {worksheet} worksheet in progress')
+    typePrint('... \n')
+    typePrint('... \n')
     typePrint('... \n', speed=0.1)
     sleep(0.5)
     worksheet_to_update = SHEET.worksheet(worksheet)
     worksheet_to_update.append_row(data)
-    typingPrint(f'{worksheet} worksheet updated!')
+    typePrint(f'{worksheet} worksheet updated!')
     print()
-    typingPrint('... \n')
+    typePrint('... \n')
     sleep(1)
-    typingPrint('Preparing leaderboard... \n')
-    typingPrint('... \n')
-    typingPrint('... \n')
+    typePrint('Preparing leaderboard... \n')
+    typePrint('... \n')
+    typePrint('... \n')
     typePrint('... \n', speed=0.1)
     sleep(1)
     cprint('DONE!', 'blue')
     sleep(1)
     print()
-    typingPrint('Press ENTER to see the leaderboard! \n')
+    typePrint('Press ENTER to see the leaderboard! \n')
     input()
     clearScreen()
 

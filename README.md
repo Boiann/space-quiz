@@ -129,7 +129,7 @@ This was not mandatory but the author felt necessary to include simple but nice 
 <!-- Stars GIF -->
 <!-- Favicon -->
 
-Only two images (image and GIF) were used for the project. The Interstellar Dream GIF was obtained from Youtube [Here](https://www.youtube.com/watch?v=Hh816wRR2hc&list=PLNZfrta02FkM15KMNlB24dDz68EPa22lD&index=27&ab_channel=AllBackgroundVideos "Link to Youtube"). The author used [GifCap](https://gifcap.dev/ "Link to GifCap page") to capture the GIF, then [XConvert](https://www.xconvert.com/compress-gif "Link to GifCap page") to resize and compress the GIF.
+Only two images (image and GIF) were used for the project. The Interstellar Dream GIF was obtained from [Youtube](https://www.youtube.com/watch?v=Hh816wRR2hc&list=PLNZfrta02FkM15KMNlB24dDz68EPa22lD&index=27&ab_channel=AllBackgroundVideos "Link to Youtube"). The author used [GifCap](https://gifcap.dev/ "Link to GifCap page") to capture the GIF, then [XConvert](https://www.xconvert.com/compress-gif "Link to GifCap page") to resize and compress the GIF.
 The GIF's purpose is to make the UX better and add something dynamic outside the CLI. 
 The other image used is favicon 'galaxy' which pairs nicely with the project.
 
@@ -204,7 +204,9 @@ Mobile wireframe was not considered as there was no instructions that making the
  <!-- img -->
 
 ### **Guide**
- - Guide/rulebook question ok input and display
+ - Guide/rulebook question Y input and display
+ <!-- img -->
+ - Guide/rulebook question N input and display
  <!-- img -->
  - Guide/rulebook input error
  <!-- img -->
@@ -226,8 +228,6 @@ Mobile wireframe was not considered as there was no instructions that making the
  <!-- img -->
  - Know more display input error
  <!-- img -->
- - Know more last question message
- <!-- img -->
 
 ### **Quiz end messages** 
  - Quiz over message and score
@@ -246,13 +246,12 @@ Mobile wireframe was not considered as there was no instructions that making the
  <!-- img -->
  - Quiz replay error input
  <!-- img -->
- - Quiz replay 'Y' input, username question
- <!-- img -->
  - Quiz replay 'Y', username question 'Y' input
  <!-- img -->
  - Quiz replay 'Y', username question 'N' input
  <!-- img -->
  - Quiz replay 'Y', username question error input
+ <!-- img -->
 
 ### **Secret username**
 The secret username is a throwback to a very popular Sci-Fi movie, '2001: A Space Odyssey. In the movie, the AI by the name HAL 9000 is the main antagonist.
