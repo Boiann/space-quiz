@@ -125,10 +125,13 @@ Testing present features:
 
 - Favicon and dynamic background/GIF
  <!-- img -->
+
 - GitHub and Youtube icon, 'Run Program' button hover colour change
  <!-- img -->
+
 - GitHub icon opening page in new tab
  <!-- img -->
+
 - Youtube icon opening page in new tab
  <!-- img -->
 

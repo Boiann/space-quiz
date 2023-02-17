@@ -4,7 +4,7 @@ SPACE-Quiz is a Project 3 for Code Institute Full-stack development program: Pyt
 Made with passion for anyone interested in space, astronomy and anything related to it.
 The whole project is dedicated to Mr. Carl Sagan, whose books, TV shows and science communication continues to inspire today.
 
-<!--Webpage image -->
+![Space Quiz website image](assets/readme_images/webpage_img.png)
 
 Visit the live site [Here.](https://space-quiz.herokuapp.com/ "Link to Budget Calculator")
 
@@ -118,7 +118,7 @@ The project also uses Google Worksheet API for:
 
 ### **Colour Scheme**
 
-<!-- Colour Palette image -->
+![Colour Palette image](assets/readme_images/color_palette.png)
 
 There are just a few colors used in the CLI, by installing/importing TERMCOLOR and CPRINT. The red colored text signifies wrong answer/input, green is used for the right answer, light cyan for leaderboard, guide and more knowledge display. The blue is used for intro/outro quote and quiz logo/intro.
 Aside for CLI itself, on the webpage the colors used are blue for quiz title and its variations for hover color change on the 'run program' button.
@@ -126,8 +126,13 @@ This was not mandatory but the author felt necessary to include simple but nice 
 
 ### **Imagery**
 
-<!-- Stars GIF -->
-<!-- Favicon -->
+ - Stars backgrounf GIF
+
+![Stars GIF](assets/readme_images/background.gif)
+
+ - Favicon
+
+![Favicon](assets/readme_images/favicon.png)
 
 Only two images (image and GIF) were used for the project. The Interstellar Dream GIF was obtained from [Youtube](https://www.youtube.com/watch?v=Hh816wRR2hc&list=PLNZfrta02FkM15KMNlB24dDz68EPa22lD&index=27&ab_channel=AllBackgroundVideos "Link to Youtube"). The author used [GifCap](https://gifcap.dev/ "Link to GifCap page") to capture the GIF, then [XConvert](https://www.xconvert.com/compress-gif "Link to GifCap page") to resize and compress the GIF.
 The GIF's purpose is to make the UX better and add something dynamic outside the CLI. 
@@ -135,7 +140,7 @@ The other image used is favicon 'galaxy' which pairs nicely with the project.
 
 ### **Structure**
 
-<!-- flowchart img -->
+![Flowchart img](assets/readme_images/quiz_flowchart.png)
 
 Flowchart was designed at the start of the project along with the wireframes.
 The final result differs from the flowchart slightly on account of implementing changes for better UX.
@@ -150,16 +155,17 @@ Some of the thing different to the flowchart:
 ### **Wireframes**
 
 Wireframes for Assessment Guide and Project Planning & Ux were made before the ones for the content of the project itself.
+
 <details>
 <summary>Assessment guide wireframe</summary>
 
-<!-- img -->
+![Assessment guide wireframe](assets/readme_images/p3_assessment_guide.png)
 </details>
 
 <details>
 <summary>Project planning wireframe</summary>
 
-<!-- img -->
+![Project planning wireframe](assets/readme_images/p3_planning_and_UX.png)
 </details>
 
 There are three wireframes for the project, each one corresponding to the level of learning outcome (grade); Pass Performance, Merit Performance and Distinction Performance.
@@ -170,19 +176,19 @@ Ideally, maximum time was to be taken to finish the project making the scope big
 <details>
 <summary>Pass Performance wireframe</summary>
 
-<!-- img -->
+![Pass Performance wireframe](assets/readme_images/space_quiz_pass_wireframe.png)
 </details>
 
 <details>
 <summary>Merit Performance wireframe</summary>
 
-<!-- img -->
+![Merit Performance wireframe](assets/readme_images/space_quiz_merit_wireframe.png)
 </details>
 
 <details>
 <summary>Distinction Performance wireframe</summary>
 
-<!-- img -->
+![Distinction Performance wireframe](assets/readme_images/space_quiz_distinction_wireframe.png)
 </details>
 
 Mobile wireframe was not considered as there was no instructions that making the project responsive was necessary. Upon checking other student's projects on Slack and their respective GitHub accounts, the author concluded this was not necessary. Also checked with mentor, confirming this.
@@ -195,63 +201,63 @@ Mobile wireframe was not considered as there was no instructions that making the
 
 ### **Intro**
  - Intro clear screen, quote and ASCII art
- <!-- image -->
+ ![Intro clear screen, quote and ASCII art](assets/shared_images/intro_clear_screen_quote_and_ASCII_art.gif)
 
 ### **Name input**
  - Name input ok, capitalize name
- <!-- image -->
+ ![Name input ok, capitalize name](assets/shared_images/name_input_ok_capitalize_name.gif)
  - Name input errors
- <!-- img -->
+ ![Name input errors](assets/shared_images/name_input_errors.gif)
 
 ### **Guide**
  - Guide/rulebook question Y input and display
- <!-- img -->
+ ![Name input errors](assets/shared_images/rulebook_question_Y_input_and_display.gif)
  - Guide/rulebook question N input and display
- <!-- img -->
+ ![Guide/rulebook question N input and display](assets/shared_images/rulebook_question_N_input_and_display.gif)
  - Guide/rulebook input error
- <!-- img -->
+ ![Guide/rulebook input error](assets/shared_images/rulebook_input_error.gif)
 
 ### **Quiz**
  - Question/answers display, answer correct
- <!-- img -->
+ ![Question/answers display, answer correct](assets/shared_images/question_answers_display_answer%20correct.gif)
  - Question/answers display, answer wrong
- <!-- img -->
+ ![Question/answers display, answer wrong](assets/shared_images/question_answers_display_answer_wrong.gif)
  - Question/answers display, hint input
- <!-- img -->
+ ![Question/answers display, hint input](assets/shared_images/question_answers_display_hint_input.gif)
  - Question/answers display, input error
- <!-- img -->
+ ![Question/answers display, input error](assets/shared_images/question_answers_display_input_error.gif)
 
 ### **More knowledge**
  - Know more display, 'Y' input
-  <!-- img -->
+ ![Know more display, 'Y' input](assets/shared_images/know_more_display_Y_input.gif)
  - Know more display, 'N' input
- <!-- img -->
+ ![Know more display, 'N' input](assets/shared_images/know_more_display_N_input.gif)
  - Know more display input error
- <!-- img -->
+ ![Know more display input error](assets/shared_images/know_more_display_input_error.gif)
 
 ### **Quiz end messages** 
  - Quiz over message and score
- <!-- img -->
+ ![Quiz over message and score](assets/shared_images/quiz_over_message_and_score.gif)
  - Score colour and message change
- <!-- img -->
+ ![Score colour and message change](assets/shared_images/score_colour_and_message_change.gif)
 
 ### **Leaderboard update message and display**
  - Updating leaderboard
- <!-- img -->
+ ![Updating leaderboard](assets/shared_images/updating_leaderboard.gif)
  - Leaderboard display
- <!-- img -->
+ ![Leaderboard display](assets/shared_images/leaderboard_display.gif)
 
 ### **Quiz replay**
  - Quiz replay 'N' input, outro quote
- <!-- img -->
+ ![Quiz replay 'N' input, outro quote](assets/shared_images/quiz_replay_N_input_outro_quote.gif)
  - Quiz replay error input
- <!-- img -->
+ ![Quiz replay error input](assets/shared_images/quiz_replay_error_input.gif)
  - Quiz replay 'Y', username question 'Y' input
- <!-- img -->
+ ![Quiz replay 'Y', username question 'Y' input](assets/shared_images/quiz_replay_Y_username_question_Y_input.gif)
  - Quiz replay 'Y', username question 'N' input
- <!-- img -->
+ ![Quiz replay 'Y', username question 'N' input](assets/shared_images/quiz_replay_Y_username_question_N_input.gif)
  - Quiz replay 'Y', username question error input
- <!-- img -->
+ ![Quiz replay 'Y', username question error input](assets/shared_images/quiz_replay_Y_username_question_error_input.gif)
 
 ### **Secret username**
 The secret username is a throwback to a very popular Sci-Fi movie, '2001: A Space Odyssey. In the movie, the AI by the name HAL 9000 is the main antagonist.
@@ -268,25 +274,26 @@ If the user enters the secret username, special message prints with change of sc
 <details> 
 <summary>=====SPOILER=====</summary>
 
-<!-- img -->
+![Secret username input result](assets/shared_images/secret_username_input_result.gif)
 </details>
 
  - Secret username score message
 <details>
 <summary>=====SPOILER=====</summary>
 
-<!-- img -->
+![Secret username score message](assets/shared_images/secret_username_score_message.gif)
 </details>
 
 ### **Front-end features**
-- Favicon and dynamic background/GIF
-<!-- img -->
-- GitHub and Youtube icon, 'Run Program' button hover colour change
-<!-- img -->
-- GitHub icon opening page in new tab
-<!-- img -->
-- Youtube icon opening page in new tab
-<!-- img -->
+
+ - Favicon and dynamic background/GIF
+ ![Favicon and dynamic background/GIF](assets/shared_images/favicon_and_dynamic_background.gif)
+ - GitHub and Youtube icon, 'Run Program' button hover colour change
+ ![GitHub and Youtube icon, 'Run Program' button hover colour change](assets/shared_images/icons_and_button_hover_color_change.gif)
+ - GitHub icon opening page in new tab
+ ![GitHub icon opening page in new tab](assets/shared_images/gitHub_icon_opening_page_in_new_tab.gif)
+ - Youtube icon opening page in new tab
+ ![Youtube icon opening page in new tab](assets/shared_images/youtube_icon_opening_page_in_new_tab.gif)
 
 ---
 
