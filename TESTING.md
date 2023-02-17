@@ -1,6 +1,3 @@
-<!-- Code for readme adapted from author's own project (Portfolio 2),
-https://github.com/Boiann/budget-calculator -->
-
 # **SPACE-QUIZ - Testing** 
 
 [Main README.md file](/README.md)
@@ -53,7 +50,7 @@ The [CI Python Linter](https://pep8ci.herokuapp.com/) service was used to valida
 
 ### **Full Testing**
 
-Manual testing was done mainly by the author. The code was ran in GitPod terminal over and over for bug checking, loops and functions performance and UX considerations. At later stage it was thoroughly tested after deployment on Heroku. The project was submitted to 'peer-code-review' channel on Slack with no issues raised. Author's brother and a couple of colleagues were given direction to 'break' the program, no breaking occured but some issues were raised. More about them in [Bugs](#bugs) section of this readme file.
+Manual testing was done mainly by the author. The code was ran in GitPod terminal over and over for bug checking, loops and functions performance and UX considerations. At later stage it was thoroughly tested after deployment on Heroku. The project was submitted to 'peer-code-review' channel on Slack with no issues raised. Author's brother and a couple of colleagues were given direction to 'break' the program, no breaking occurred but some issues were raised. More about them in [Bugs](#bugs) section of this readme file.
 
 Testing present features:
 
@@ -153,7 +150,7 @@ Testing present features:
 
 ### **Known Bugs**
 
-- The emojis (thumbs up and thumbs down after correct/wrong anser in the quiz) don't always render properly for user on Mozilla Firefox . The author did not manage to find a solution to fix this. After discussion with author's mentor the decision was made to leave the emojis in.
+- The emojis (thumbs up and thumbs down after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . The author did not manage to find a solution to fix this. After discussion with author's mentor the decision was made to leave the emojis in.
 
 ### **Solved Bugs**
 
@@ -164,6 +161,7 @@ Few of the 'bigger' and more memorable bugs:
  - Bug where the player's wrong inputs were adding to the score, solved by careful inspection of the code.
  - Inability to restart the program from the beginning from within the CLI. After many tries with the codes that didn't work and many hours online, the solution was found, and code adapted from [this](https://stackoverflow.com/questions/46112605/python3-issue-with-calling-execopen-read-inside-a-function "Link to restart program") Stack Overflow page.
  - Bug where there would sometimes be an ASCII escape code printed in the outro quote. This was brought on by author's own lack of attention. The whole quote was copied from the [Carl Sagan quotes webpage](https://www.goodreads.com/author/quotes/10538.Carl_Sagan "Link to Carl Sagan quotes webpage"), including the website's quotes (not actual input quotes).
+ - Inability to open preview of the webpage whilst adjusting HTML and CSS. The author contacted the tutoring service available as student of Code Institute. The solution was not found but it was suggested to install Live View extension for GitPod workspace, which author installed. After some time on Google the half-solution was found [here](https://www.gitpod.io/docs/introduction/languages/html "Link to HTML/CSS in GitPod"). By inputting 'python -m http.server 8000' into the terminal a list of directories/files would open on a new webpage, and after clicking 'views' it was possible to somewhat see what was needed to adjust the background/spacing/flex-display.
 
 
 [Back to top ⇧](#space-quiz---testing)

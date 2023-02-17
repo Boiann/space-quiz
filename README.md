@@ -77,7 +77,7 @@ The project also uses Google Worksheet API for:
  - Updating and displaying top 10 players on a leaderboard
  - This is the [Google worksheet](https://docs.google.com/spreadsheets/d/1-mEIbGDZpEof_4VUdDmKuQsoC3czJN-EKm6sUlSruns/edit#gid=0 "Link to Google sheets page") used to hold the data
 
- Some of the features present in the project were concieved in the planning stages (error checking, feedback etc) and some were developed as the project grew in scope (more knowledge, secret username etc). The final result is an amalgam of what the author considers to be a good, interesting and educational quiz.
+ Some of the features present in the project were conceived in the planning stages (error checking, feedback etc) and some were developed as the project grew in scope (more knowledge, secret username etc). The final result is an amalgam of what the author considers to be a good, interesting and educational quiz.
 
 ### **Project Goals**
  - Develop CLI based quiz game using Python
@@ -185,7 +185,7 @@ Ideally, maximum time was to be taken to finish the project making the scope big
 <!-- img -->
 </details>
 
-Mobile wireframe was not considered as there was no instructions that making the project responsive was neccessary. Upon checking other student's projects on Slack and their respective GitHub accounts, the author concluded this was not neccessary. Also checked with mentor, confirming this.
+Mobile wireframe was not considered as there was no instructions that making the project responsive was necessary. Upon checking other student's projects on Slack and their respective GitHub accounts, the author concluded this was not necessary. Also checked with mentor, confirming this.
 
 [Back to top ⇧](#space-quiz)
 
@@ -302,9 +302,9 @@ The author would like to implement random question order and add a lot more ques
 
 ### **Languages Used**
 
-- [HTML](https://en.wikipedia.org/wiki/HTML "Link to html wikipedia page") - The website content was adjusted using HTML language.
-- [CSS](https://en.wikipedia.org/wiki/CSS "Link to css wikipedia page") - The webpage was styled using custom CSS internally using 'style' in the head of layout.html.
-- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python wikipedia page") - The project logic and operations inside CLI were developed using Python language.
+- [HTML](https://en.wikipedia.org/wiki/HTML "Link to html Wikipedia page") - The website content was adjusted using HTML language.
+- [CSS](https://en.wikipedia.org/wiki/CSS "Link to css Wikipedia page") - The webpage was styled using custom CSS internally using 'style' in the head of layout.html.
+- [PYTHON](https://en.wikipedia.org/wiki/Python_(programming_language) "Link to Python Wikipedia page") - The project logic and operations inside CLI were developed using Python language.
 
 ### **Programs Used**
 
