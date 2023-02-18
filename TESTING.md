@@ -24,7 +24,7 @@
 
 The [CI Python Linter](https://pep8ci.herokuapp.com/) service was used to validate the Python code used, showing no errors.
 
-<!-- img -->
+![CI Python Linter results](assets/testing_images/python_linter_results.gif)
 
 [Back to top ⇧](#space-quiz---testing)
 
@@ -54,95 +54,67 @@ Manual testing was done mainly by the author. The code was ran in GitPod termina
 
 Testing present features:
 
-- Intro clear screen, quote and ASCII art
- <!-- image -->
-
-- Name input ok, capitalize name
- <!-- image -->
-
-- Name input errors
- <!-- img -->
-
-- Guide/rulebook question ok input and display
- <!-- img -->
-
-- Guide/rulebook input error
- <!-- img -->
-
-- Question/answers display, answer correct
- <!-- img -->
-
-- Question/answers display, answer wrong
- <!-- img -->
-
-- Question/answers display, hint input
- <!-- img -->
-
-- Question/answers display, input error
- <!-- img -->   
-
-- Know more display, 'Y' input
-  <!-- img -->
-
-- Know more display, 'N' input
- <!-- img -->
-
-- Know more display input error
- <!-- img -->
-
-- Know more last question message
- <!-- img -->
-
-- Quiz over message and score
- <!-- img -->
-
-- Score colour and message change
- <!-- img -->  
-
-- Updating leaderboard
- <!-- img -->
-
-- Leaderboard display
- <!-- img --> 
-
-- Quiz replay 'N' input, outro quote
- <!-- img -->
-
-- Quiz replay error input
- <!-- img -->
-
-- Quiz replay 'Y' input, username question
- <!-- img -->
-
-- Quiz replay 'Y', username question 'Y' input
- <!-- img -->
-
-- Quiz replay 'Y', username question 'N' input
- <!-- img -->
-
-- Quiz replay 'Y', username question error input 
- <!-- img -->
-
-- Favicon and dynamic background/GIF
- <!-- img -->
-
-- GitHub and Youtube icon, 'Run Program' button hover colour change
- <!-- img -->
-
-- GitHub icon opening page in new tab
- <!-- img -->
-
-- Youtube icon opening page in new tab
- <!-- img -->
+ - Intro clear screen, quote and ASCII art
+ ![Intro clear screen, quote and ASCII art](assets/shared_images/intro_clear_screen_quote_and_ASCII_art.gif)
+ - Name input ok, capitalize name
+ ![Name input ok, capitalize name](assets/shared_images/name_input_ok_capitalize_name.gif)
+ - Name input errors
+ ![Name input errors](assets/shared_images/name_input_errors.gif)
+ - Guide/rulebook question Y input and display
+ ![Name input errors](assets/shared_images/rulebook_question_Y_input_and_display.gif)
+ - Guide/rulebook question N input and display
+ ![Guide/rulebook question N input and display](assets/shared_images/rulebook_question_N_input_and_display.gif)
+ - Guide/rulebook input error
+ ![Guide/rulebook input error](assets/shared_images/rulebook_input_error.gif)
+ - Question/answers display, answer correct
+ ![Question/answers display, answer correct](assets/shared_images/question_answers_display_answer%20correct.gif)
+ - Question/answers display, answer wrong
+ ![Question/answers display, answer wrong](assets/shared_images/question_answers_display_answer_wrong.gif)
+ - Question/answers display, hint input
+ ![Question/answers display, hint input](assets/shared_images/question_answers_display_hint_input.gif)
+ - Question/answers display, input error
+ ![Question/answers display, input error](assets/shared_images/question_answers_display_input_error.gif)
+ - Know more display, 'Y' input
+ ![Know more display, 'Y' input](assets/shared_images/know_more_display_Y_input.gif)
+ - Know more display, 'N' input
+ ![Know more display, 'N' input](assets/shared_images/know_more_display_N_input.gif)
+ - Know more display input error
+ ![Know more display input error](assets/shared_images/know_more_display_input_error.gif)
+ - Quiz over message and score
+ ![Quiz over message and score](assets/shared_images/quiz_over_message_and_score.gif)
+ - Score colour and message change
+ ![Score colour and message change](assets/shared_images/score_colour_and_message_change.gif)
+ - Updating leaderboard
+ ![Updating leaderboard](assets/shared_images/updating_leaderboard.gif)
+ - Leaderboard display
+ ![Leaderboard display](assets/shared_images/leaderboard_display.gif)
+ - Quiz replay 'N' input, outro quote
+ ![Quiz replay 'N' input, outro quote](assets/shared_images/quiz_replay_N_input_outro_quote.gif)
+ - Quiz replay error input
+ ![Quiz replay error input](assets/shared_images/quiz_replay_error_input.gif)
+ - Quiz replay 'Y', username question 'Y' input
+ ![Quiz replay 'Y', username question 'Y' input](assets/shared_images/quiz_replay_Y_username_question_Y_input.gif)
+ - Quiz replay 'Y', username question 'N' input
+ ![Quiz replay 'Y', username question 'N' input](assets/shared_images/quiz_replay_Y_username_question_N_input.gif)
+ - Quiz replay 'Y', username question error input
+ ![Quiz replay 'Y', username question error input](assets/shared_images/quiz_replay_Y_username_question_error_input.gif)
+ - Favicon and dynamic background/GIF
+ ![Favicon and dynamic background/GIF](assets/shared_images/favicon_and_dynamic_background.gif)
+ - GitHub and Youtube icon, 'Run Program' button hover colour change
+ ![GitHub and Youtube icon, 'Run Program' button hover colour change](assets/shared_images/icons_and_button_hover_color_change.gif)
+ - GitHub icon opening page in new tab
+ ![GitHub icon opening page in new tab](assets/shared_images/gitHub_icon_opening_page_in_new_tab.gif)
+ - Youtube icon opening page in new tab
+ ![Youtube icon opening page in new tab](assets/shared_images/youtube_icon_opening_page_in_new_tab.gif)
 
 <details> 
 <summary>==SPOILER regarding secret username==</summary>
 
  - Secret username input result
- <!-- img -->
+ ![Secret username input result](assets/shared_images/secret_username_input_result.gif)
 
  - Secret username score message
- <!-- img -->
+ ![Secret username score message](assets/shared_images/secret_username_score_message.gif)
 </details> 
 
 [Back to top ⇧](#space-quiz---testing)
@@ -154,6 +126,7 @@ Testing present features:
 ### **Known Bugs**
 
 - The emojis (thumbs up and thumbs down after correct/wrong answer in the quiz) don't always render properly for user on Mozilla Firefox . The author did not manage to find a solution to fix this. After discussion with author's mentor the decision was made to leave the emojis in.
+- Not so much a bug, but having the requirements to put the '\n' for every input is not something the author likes, it changed the Ux slightly. This rule was given to CI students in regards using the [Code Institute template](https://github.com/Code-Institute-Org/python-essentials-template "Link to CI Python template") for this project. The instruction was to put the '\n' for every input or else it would not print to the terminal.
 
 ### **Solved Bugs**
 
