@@ -127,12 +127,14 @@ This was not mandatory but the author felt necessary to include simple but nice 
 ### **Imagery**
 
  - Stars backgrounf GIF
+ <br>
 
-![Stars GIF](assets/readme_images/background.gif)
+ ![Stars GIF](assets/readme_images/background.gif)
 
  - Favicon
+ <br>
 
-![Favicon](assets/readme_images/favicon.png)
+ ![Favicon](assets/readme_images/favicon.png)
 
 Only two images (image and GIF) were used for the project. The Interstellar Dream GIF was obtained from [Youtube](https://www.youtube.com/watch?v=Hh816wRR2hc&list=PLNZfrta02FkM15KMNlB24dDz68EPa22lD&index=27&ab_channel=AllBackgroundVideos "Link to Youtube"). The author used [GifCap](https://gifcap.dev/ "Link to GifCap page") to capture the GIF, then [XConvert](https://www.xconvert.com/compress-gif "Link to GifCap page") to resize and compress the GIF.
 The GIF's purpose is to make the UX better and add something dynamic outside the CLI. 
@@ -201,62 +203,120 @@ Mobile wireframe was not considered as there was no instructions that making the
 
 ### **Intro**
  - Intro clear screen, quote and ASCII art
+ <br>
+
  ![Intro clear screen, quote and ASCII art](assets/shared_images/intro_clear_screen_quote_and_ASCII_art.gif)
 
 ### **Name input**
  - Name input ok, capitalize name
+ <br>
+
  ![Name input ok, capitalize name](assets/shared_images/name_input_ok_capitalize_name.gif)
+ 
  - Name input errors
+ <br>
+
  ![Name input errors](assets/shared_images/name_input_errors.gif)
 
 ### **Guide**
  - Guide/rulebook question Y input and display
+ <br>
+
  ![Name input errors](assets/shared_images/rulebook_question_Y_input_and_display.gif)
+
  - Guide/rulebook question N input and display
+ <br>
+
  ![Guide/rulebook question N input and display](assets/shared_images/rulebook_question_N_input_and_display.gif)
+
  - Guide/rulebook input error
+ <br>
+
  ![Guide/rulebook input error](assets/shared_images/rulebook_input_error.gif)
 
 ### **Quiz**
  - Question/answers display, answer correct
+ <br>
+
  ![Question/answers display, answer correct](assets/shared_images/question_answers_display_answer%20correct.gif)
+
  - Question/answers display, answer wrong
+ <br>
+
  ![Question/answers display, answer wrong](assets/shared_images/question_answers_display_answer_wrong.gif)
+
  - Question/answers display, hint input
+ <br>
+
  ![Question/answers display, hint input](assets/shared_images/question_answers_display_hint_input.gif)
+
  - Question/answers display, input error
+ <br>
+
  ![Question/answers display, input error](assets/shared_images/question_answers_display_input_error.gif)
 
 ### **More knowledge**
  - Know more display, 'Y' input
+ <br>
+
  ![Know more display, 'Y' input](assets/shared_images/know_more_display_Y_input.gif)
+
  - Know more display, 'N' input
+ <br>
+
  ![Know more display, 'N' input](assets/shared_images/know_more_display_N_input.gif)
+
  - Know more display input error
+ <br>
+
  ![Know more display input error](assets/shared_images/know_more_display_input_error.gif)
 
 ### **Quiz end messages** 
  - Quiz over message and score
+ <br>
+
  ![Quiz over message and score](assets/shared_images/quiz_over_message_and_score.gif)
+
  - Score colour and message change
+ <br>
+
  ![Score colour and message change](assets/shared_images/score_colour_and_message_change.gif)
 
 ### **Leaderboard update message and display**
  - Updating leaderboard
+ <br>
+
  ![Updating leaderboard](assets/shared_images/updating_leaderboard.gif)
+
  - Leaderboard display
+ <br>
+
  ![Leaderboard display](assets/shared_images/leaderboard_display.gif)
 
 ### **Quiz replay**
  - Quiz replay 'N' input, outro quote
+ <br>
+
  ![Quiz replay 'N' input, outro quote](assets/shared_images/quiz_replay_N_input_outro_quote.gif)
+
  - Quiz replay error input
+ <br>
+
  ![Quiz replay error input](assets/shared_images/quiz_replay_error_input.gif)
+
  - Quiz replay 'Y', username question 'Y' input
+ <br>
+
  ![Quiz replay 'Y', username question 'Y' input](assets/shared_images/quiz_replay_Y_username_question_Y_input.gif)
+
  - Quiz replay 'Y', username question 'N' input
+ <br>
+
  ![Quiz replay 'Y', username question 'N' input](assets/shared_images/quiz_replay_Y_username_question_N_input.gif)
+
  - Quiz replay 'Y', username question error input
+ <br>
+
  ![Quiz replay 'Y', username question error input](assets/shared_images/quiz_replay_Y_username_question_error_input.gif)
 
 ### **Secret username**
@@ -287,12 +347,23 @@ If the user enters the secret username, special message prints with change of sc
 ### **Front-end features**
 
  - Favicon and dynamic background/GIF
+ <br>
+
  ![Favicon and dynamic background/GIF](assets/shared_images/favicon_and_dynamic_background.gif)
+
  - GitHub and Youtube icon, 'Run Program' button hover colour change
+ <br>
+
  ![GitHub and Youtube icon, 'Run Program' button hover colour change](assets/shared_images/icons_and_button_hover_color_change.gif)
+
  - GitHub icon opening page in new tab
+ <br>
+
  ![GitHub icon opening page in new tab](assets/shared_images/gitHub_icon_opening_page_in_new_tab.gif)
+
  - Youtube icon opening page in new tab
+ <br>
+ 
  ![Youtube icon opening page in new tab](assets/shared_images/youtube_icon_opening_page_in_new_tab.gif)
 
 ---

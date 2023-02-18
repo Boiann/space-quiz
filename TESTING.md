@@ -55,65 +55,147 @@ Manual testing was done mainly by the author. The code was ran in GitPod termina
 Testing present features:
 
  - Intro clear screen, quote and ASCII art
+ <br>
+
  ![Intro clear screen, quote and ASCII art](assets/shared_images/intro_clear_screen_quote_and_ASCII_art.gif)
+
  - Name input ok, capitalize name
+ <br>
+
  ![Name input ok, capitalize name](assets/shared_images/name_input_ok_capitalize_name.gif)
+ 
  - Name input errors
+ <br>
+
  ![Name input errors](assets/shared_images/name_input_errors.gif)
+
  - Guide/rulebook question Y input and display
+ <br>
+
  ![Name input errors](assets/shared_images/rulebook_question_Y_input_and_display.gif)
+
  - Guide/rulebook question N input and display
+ <br>
+
  ![Guide/rulebook question N input and display](assets/shared_images/rulebook_question_N_input_and_display.gif)
+
  - Guide/rulebook input error
+ <br>
+
  ![Guide/rulebook input error](assets/shared_images/rulebook_input_error.gif)
+
  - Question/answers display, answer correct
+ <br>
+
  ![Question/answers display, answer correct](assets/shared_images/question_answers_display_answer%20correct.gif)
+
  - Question/answers display, answer wrong
+ <br>
+
  ![Question/answers display, answer wrong](assets/shared_images/question_answers_display_answer_wrong.gif)
+
  - Question/answers display, hint input
+ <br>
+
  ![Question/answers display, hint input](assets/shared_images/question_answers_display_hint_input.gif)
+
  - Question/answers display, input error
+ <br>
+
  ![Question/answers display, input error](assets/shared_images/question_answers_display_input_error.gif)
+
  - Know more display, 'Y' input
+ <br>
+
  ![Know more display, 'Y' input](assets/shared_images/know_more_display_Y_input.gif)
+
  - Know more display, 'N' input
+ <br>
+
  ![Know more display, 'N' input](assets/shared_images/know_more_display_N_input.gif)
+
  - Know more display input error
+ <br>
+
  ![Know more display input error](assets/shared_images/know_more_display_input_error.gif)
+
  - Quiz over message and score
+ <br>
+
  ![Quiz over message and score](assets/shared_images/quiz_over_message_and_score.gif)
+
  - Score colour and message change
+ <br>
+
  ![Score colour and message change](assets/shared_images/score_colour_and_message_change.gif)
+
  - Updating leaderboard
+ <br>
+
  ![Updating leaderboard](assets/shared_images/updating_leaderboard.gif)
+
  - Leaderboard display
+ <br>
+
  ![Leaderboard display](assets/shared_images/leaderboard_display.gif)
+
  - Quiz replay 'N' input, outro quote
+ <br>
+
  ![Quiz replay 'N' input, outro quote](assets/shared_images/quiz_replay_N_input_outro_quote.gif)
+
  - Quiz replay error input
+ <br>
+
  ![Quiz replay error input](assets/shared_images/quiz_replay_error_input.gif)
+
  - Quiz replay 'Y', username question 'Y' input
+ <br>
+
  ![Quiz replay 'Y', username question 'Y' input](assets/shared_images/quiz_replay_Y_username_question_Y_input.gif)
+
  - Quiz replay 'Y', username question 'N' input
+ <br>
+
  ![Quiz replay 'Y', username question 'N' input](assets/shared_images/quiz_replay_Y_username_question_N_input.gif)
+
  - Quiz replay 'Y', username question error input
+ <br>
+
  ![Quiz replay 'Y', username question error input](assets/shared_images/quiz_replay_Y_username_question_error_input.gif)
+
  - Favicon and dynamic background/GIF
+ <br>
+
  ![Favicon and dynamic background/GIF](assets/shared_images/favicon_and_dynamic_background.gif)
+
  - GitHub and Youtube icon, 'Run Program' button hover colour change
+ <br>
+
  ![GitHub and Youtube icon, 'Run Program' button hover colour change](assets/shared_images/icons_and_button_hover_color_change.gif)
+
  - GitHub icon opening page in new tab
+ <br>
+
  ![GitHub icon opening page in new tab](assets/shared_images/gitHub_icon_opening_page_in_new_tab.gif)
+
  - Youtube icon opening page in new tab
+ <br>
+
  ![Youtube icon opening page in new tab](assets/shared_images/youtube_icon_opening_page_in_new_tab.gif)
+
 
 <details> 
 <summary>==SPOILER regarding secret username==</summary>
 
  - Secret username input result
+ <br>
+
  ![Secret username input result](assets/shared_images/secret_username_input_result.gif)
 
  - Secret username score message
+ <br>
+ 
  ![Secret username score message](assets/shared_images/secret_username_score_message.gif)
 </details> 
 
