@@ -10,6 +10,12 @@ import art
 from termcolor import colored, cprint
 import emoji
 
+if not os.path.exists('creds.json'):
+    google_creds = os.environ.get('CREDS_JSON')
+    if google_creds:
+        with open('creds.json', 'w') as f:
+            f.write(google_creds)
+
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
     "https://www.googleapis.com/auth/drive.file",
